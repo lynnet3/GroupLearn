@@ -10,8 +10,8 @@ const New = props =>{
                         name="username"
                         type="text" 
                         placeholder="Username"
-                        value={value.username}
-                        onChange={handleUserChange}
+                        value={props.username}
+                        onChange={props.handleUserChange}
                         />
                     </div>
                     <div className="field">
@@ -19,8 +19,8 @@ const New = props =>{
                         name="email"
                         type="text"
                         placeholder="Email"
-                        value={value.email}
-                        onChange={handleEmailChange}
+                        value={props.email}
+                        onChange={props.handleEmailChange}
                         />
                     </div>
                     <div className="field">
@@ -28,8 +28,8 @@ const New = props =>{
                         name="password"
                         type="password"
                         placeholder="Password"
-                        value={value.password}
-                        onChange={handlePassChange}
+                        value={props.password}
+                        onChange={props.handlePassChange}
                         />
                     </div>
                 </div>
