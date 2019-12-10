@@ -17,13 +17,69 @@
     <title>React App</title>
 
   </head>
+
 <style>
+  html{
+    background-color: gray;
+  }
  #header-content{
     background-image: linear-gradient(to right, #c770d8, #6066ff, #7fefc8);
     border-radius: 10px;
     border: 12px ridge #e2e2e2;
     box-shadow: 5px 5px 10px #272B30;
   }
+
+  #main-container{
+    padding: 15px;
+    text-align:center;
+  }
+
+  .user{
+    border: 5px ridge gray;
+  display:inline-block;
+  color: blue;
+
+  }
+
+  .sidenav {
+  height: 100%;
+  width: 175px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: lightgray;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #2196F3;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #064579;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.search{
+  padding-top: 10px;
+
+}
 </style>
   <body>
 
@@ -33,34 +89,26 @@
           </header>
       </div>
 
-      <div class="ui left demo vertical inverted sidebar labeled icon menu">
-          <a class="item">
-            <i class="home icon"></i>
-            Home
-          </a>
-          <a class="item">
-            <i class="block layout icon"></i>
-            Topics
-          </a>
-          <a class="item">
-            <i class="smile icon"></i>
-            Friends
-          </a>
-        </div>
+      <div class="sidenav">
+          <div class="search">
+              <input class="prompt" type="text" placeholder="Search">
+              <div class="results"></div>
+            </div>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#clients">Clients</a>
+          <a href="#contact">Contact</a>
 
-      <div id="myModal" class="modal">
-          <!-- Modal content -->
-          
-          <div class="modal-content">
-              <span class="close">&times;</span>
+          <div class="user">
+              <span class="close"></span>
               <form action="/api" method="POST">
                   <div class="form-row">
-                      <div class="form-group col-md-6">
+                      <div class="form-group">
                           <label class="form-head" for="username">Username:</label>
                           <input type="text" id="modalUsername" name="username" class="form-control" placeholder="Username..."
                               minlength="3" maxlength="15" required>
                       </div>
-                      <div class="form-group col-md-6">
+                      <div class="form-group">
                           <label class="form-head" for="password">Password:</label>
                           <input type="password" id="modalPassword" name="password" class="form-control" minlength="7"
                               maxlength="10" placeholder="Password..." required>
@@ -74,46 +122,10 @@
               </form>
           </div>
       </div>
-
+      </div>
   
-      <div class="ui card">
-          <div class="content">
-            <div class="header">Project Timeline</div>
-          </div>
-          <div class="content">
-            <h4 class="ui sub header">Activity</h4>
-            <div class="ui small feed">
-              <div class="event">
-                <div class="content">
-                  <div class="summary">
-                     <a>Elliot Fu</a> added <a>Jenny Hess</a> to the project
-                  </div>
-                </div>
-              </div>
-              <div class="event">
-                <div class="content">
-                  <div class="summary">
-                     <a>Stevie Feliciano</a> was added as an <a>Administrator</a>
-                  </div>
-                </div>
-              </div>
-              <div class="event">
-                <div class="content">
-                  <div class="summary">
-                     <a>Helen Troy</a> added two pictures
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="extra content">
-            <button class="ui button">Join Project</button>
-          </div>
-        </div>
 
-
-
-
+      
       <div id="main-container" class="container">
           <section class="main-section">
 
