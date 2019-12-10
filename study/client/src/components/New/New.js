@@ -2,7 +2,7 @@ import React from "react";
 
 const New = props =>{
     return(
-        <form className="login">
+        <form className="new">
             <div className="ui form">
                 <div className="fields">
                     <div className="field">
