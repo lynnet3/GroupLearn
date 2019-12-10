@@ -5,18 +5,38 @@ import API from "../utils/API";
 
 class Main extends Component {
 
+    state = {
+        name: "",
+        password: "",
+        email: ""
+      };
+    
+
     handleSubmit = event => {
 event.preventDefault()
 
-if (this.state.name && this.state.password) {
-    API.saveBook({
-      name: this.state.title,
+const form = this.state
+
+if (form.name && form.password && form.email) {
+    console.log(form.name)
+    console.log(form.password)
+    console.log(form.email)
+    API.saveUser({
+      name: this.state.name,
       password: this.state.password,
+      email: this.state.email,
     })
       .then(res => console.log(res))
       .catch(err => console.log(err));
     }
 };
+
+handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
     
 
 render() {
@@ -38,6 +58,12 @@ return (
         onChange={this.handleInputChange}
         name="password"
         placeholder="enter password here"
+        />
+         <Input
+        value={this.state.email}
+        onChange={this.handleInputChange}
+        name="email"
+        placeholder="enter email here"
         />
         <FormBtn
         onClick={this.handleSubmit} //when this button is clicked, it submits the form
