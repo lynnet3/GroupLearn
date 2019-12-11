@@ -17,13 +17,12 @@ event.preventDefault()
 const form = this.state
 
 if (form.userName && form.password) { //if all 3 areas are filled out, run this
-    console.log(form.userName) //log them
-    console.log(form.password)
+    console.log("posted") //log them
     API.getUser({ //call getUser from ../utils/API
       userName: form.userName, //insert the 2 data areas to getUser
       password: form.password,
     })
-      .then(res => console.log(res))
+      .then(res => {console.log(res.data)})
       .catch(err => console.log(err));
     }
 };

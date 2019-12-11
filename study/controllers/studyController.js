@@ -35,18 +35,16 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
    findUser: function(req, res) {
-    console.log("hi")
-    console.log(req.query)
-    console.log(req.query.q)
-    console.log(req.query.q.userName)
+    console.log(req.body.params.q.userName)
+    console.log(req.body.params.q.password)
+    //console.log(JSON.parse(req.query.q).userName)
     db.User
-      .find({userName: req.body.userName})
+      .find({userName: req.body.params.q.userName, password: req.body.params.q.password})
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   findAllUsers: function(req, res) {
-    //console.log(req)
     db.User
       .find(req.query)
       .sort({ date: -1 })
@@ -54,10 +52,20 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   createUser: function(req, res) {
-    console.log(req.body.userName)
-    db.User
+    db.User.find({
+        userName: req.body.userName
+    }).then(function(results) {
+      if (results.length > 0) {
+        console.log("Results")
+        console.log(results)
+        res.send("Username taken, please try something else");
+      } else {
+        db.User
       .create(req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+      }
+    });
+    
   },
 };

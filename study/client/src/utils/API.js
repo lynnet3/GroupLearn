@@ -11,8 +11,8 @@ export default {
   },
   // Deletes the book with the given id
   getUser: function(userData) {
-    console.log(userData)
-    return axios.get("/api/users", { params: { q: userData } });
+    console.log("hi2")
+    return axios.post("/api/users/login", { params: { q: userData } });
   },
   // Saves a user to the database
   saveUser: function(userData) {

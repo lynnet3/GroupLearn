@@ -26,7 +26,7 @@ if (form.userName && form.password && form.email) { //if all 3 areas are filled 
       password: form.password,
       email: form.email,
     })
-      .then(res => console.log(res))
+      .then(res => console.log(res.data))
       .catch(err => console.log(err));
     }
 };
