@@ -1,10 +1,10 @@
 const router = require("express").Router();
-const studysRoutes = require("./studys");
-const userRoutes = require("./users");
+const studiesRoutes = require("./studies");
+const usersRoutes = require("./users");
 
-// Studys routes
-router.use("/studys", studysRoutes);
+// studies routes
+router.use("/studies", studiesRoutes); //if using api/studies routes to ./studies
 
-router.use("/users", userRoutes);
+router.use("/users", usersRoutes); //if using api/users routes to ./users
 
 module.exports = router;
