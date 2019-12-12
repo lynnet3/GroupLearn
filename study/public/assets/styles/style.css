@@ -1,0 +1,37 @@
+body {
+    background-color: black;
+    height:100%;
+}
+label {
+    background-color:white;
+}
+
+.ui form{
+    text-align:center;
+}
+
+#title{
+    font-size: 100px;
+}
+
+#login-title{
+    text-align:center;
+}
+
+#cat{
+    text-align:center;
+}
+
+#ui small image hide{
+    height:12px;
+}
+
+#main-quest{
+    background-color: black;
+    height:100%;
+}
+
+#root{
+    text-align: center;
+    color:beige;
+}
