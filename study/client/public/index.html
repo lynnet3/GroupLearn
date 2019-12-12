@@ -10,6 +10,16 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="logo192.png" />
+    <link rel ="stylesheet" type ="text/css" href ="assets/styles/style.css">
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <script src="jquery-3.4.1.min.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script src="semantic/dist/semantic.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+  <link rel="stylesheet" href="login.html">
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -28,7 +38,91 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div class="ui secondary pointing menu">
+        <a class="active item" href="index.html">
+          Home
+        </a>
+        <a class="item">
+          Messages
+        </a>
+        <a class="item">
+          Friends
+        </a>
+        <div class="right menu">
+          <a class="ui item" href="login.html" id="login-title">
+            Login
+          </a>
+          <a class="ui item">
+            Logout
+          </a>
+        </div>
+      </div>
+      <div class="ui segment">
+        <p></p>
+      </div>
+    <div id="root">
+      Study Group  
+    </div>
+   
+    <br/>
+
+
+
+    <div class="ui inverted segment">
+        <h1 id="title"> STUDY GROUP</h1>
+      <h1 id="main-quest"> Which subjects are you interested in studying?</h1><br/>   
+
+          <div class="ui move right reveal" id="cat">
+              <div class="visible content">
+                <img src="assets/images/math-icon.jpg" class="ui small image">
+              </div>
+              <div class="hidden content">
+                <img src="assets/images/Math 2019-12-11 18.51.56.png" class="ui small image hide">
+              </div>
+        </div>
+        <div class="ui move reveal" id="cat">
+          <div class="visible content">
+            <img src="assets/images/art.jpg" class="ui small image">
+          </div>
+          <div class="hidden content">
+            <img src="assets/images/Art 2019-12-11 18.52.33.png" class="ui small image hide">
+          </div>
+        </div>
+        <div class="ui move up reveal" id="cat">
+          <div class="visible content">
+            <img src="assets/images/science-icon.jpg" class="ui small image">
+          </div>
+          <div class="hidden content">
+            <img src="assets/images/Science 2019-12-11 18.45.30.png" class="ui small image hide">
+          </div>
+        </div>
+        <div class="ui move down reveal" id="cat">
+          <div class="visible content">
+            <img src="assets/images/history.jpg" class="ui small image">
+          </div>
+          <div class="hidden content">
+            <img src="assets/images/History 2019-12-11 18.52.20.png" class="ui small image hide">
+          </div>
+        </div>
+
+
+      </div>
+  
+      <div class="ui sidebar inverted vertical menu">
+        <a class="item">
+          1
+        </a>
+        <a class="item">
+          2
+        </a>
+        <a class="item">
+          3
+        </a>
+      </div>
+      <div class="pusher">
+        <!-- Site content !-->
+      </div>
+  
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -39,5 +133,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="assets/javascript/app.js"></script>
   </body>
 </html>
