@@ -1,15 +1,13 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const studySchema = new Schema({
-  name: { type: String, required: true },
+const studieschema = new Schema({
   subject: { type: String, required: true },
   location: { type: String, required: true },
-  email: { type: String, required: true },
   content: String,
   date: { type: Date, default: Date.now }
 });
 
-const Study = mongoose.model("Study", studySchema);
+const Study = mongoose.model("Study", studieschema);
 
 module.exports = Study;

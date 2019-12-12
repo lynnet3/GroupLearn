@@ -8,7 +8,7 @@ mongoose.connect(
   "mongodb://localhost/studygrouplist"
 );
 
-const studySeed = [
+const studieseed = [
   {
     name: "Jane Doe",
     subject: "English",
@@ -104,7 +104,7 @@ const studySeed = [
 
 db.Study
   .remove({})
-  .then(() => db.Study.collection.insertMany(studySeed))
+  .then(() => db.Study.collection.insertMany(studieseed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);

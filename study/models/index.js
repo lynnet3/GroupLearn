@@ -1,4 +1,5 @@
 module.exports = {
-    Study: require("./study")
+    Study: require("./study"),
+    User: require("./user")
   };
   
