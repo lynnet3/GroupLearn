@@ -3,6 +3,8 @@ import Main from "./pages/Main";
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
+import Login from "./components/LogInForm/Login";
+import LogInForm from "./components/LogInForm/index";
 
 function App() {
   return (
