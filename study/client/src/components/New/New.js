@@ -32,6 +32,7 @@ const New = props =>{
                         onChange={props.handlePassChange}
                         />
                     </div>
+                    <div className="ui blue submit button">Sign Up</div>
                 </div>
             </div>
         </form>
