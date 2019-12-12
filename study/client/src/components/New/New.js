@@ -13,6 +13,7 @@ const New = props =>{
                         value={props.username}
                         onChange={props.handleUserChange}
                         />
+                        <i className="user icon"></i>
                     </div>
                     <div className="field">
                         <input
@@ -22,6 +23,7 @@ const New = props =>{
                         value={props.email}
                         onChange={props.handleEmailChange}
                         />
+                        <i className="envelope square icon"></i>
                     </div>
                     <div className="field">
                         <input 
@@ -31,8 +33,9 @@ const New = props =>{
                         value={props.password}
                         onChange={props.handlePassChange}
                         />
+                        <i className="lock icon"></i>
                     </div>
-                    <div className="ui blue submit button">Sign Up</div>
+                    <div className="ui green submit button">Sign Up</div>
                 </div>
             </div>
         </form>
@@ -40,19 +43,3 @@ const New = props =>{
 };
 
 export default New;
-
-
-//<input
-    // name="email"
-    // type="text"
-    // placeholder="Email"
-    // value={values.email}
-    // onChange={handleChange}
-    // name="password"
-    // type="password"
-    // placeholder="Password"
-    // value={value.password}
-    // onChange={handleChange}
-    // />
-
-
