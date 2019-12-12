@@ -1,10 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "project-3",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-=======
   "name": "study",
   "version": "0.1.0",
   "private": true,
@@ -15,7 +9,6 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0"
   },
->>>>>>> ccbc10e0464c0d4342490ddfa51eeeffe7ed5f87
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
