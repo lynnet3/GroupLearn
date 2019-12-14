@@ -34,7 +34,34 @@ const Returning = props =>{
                             <div className="ui blue submit button">Login</div>
                         </div>
                     </div>
+                    
                     <div class="middle aligned column">
+                        <div className="ui form">
+                            <div className="field">
+                                <div className="ui right icon input">
+                                    <input 
+                                    name="userName"
+                                    type="text"
+                                    placeholder="Username"
+                                    value={props.newUser}
+                                    onChange={props.handleNewUser}
+                                    />
+                                    <i className="user icon"></i>
+                                </div>
+                            </div>
+                            <div className="field">
+                                <div className="ui right icon input">
+                                    <input
+                                    name="newEmail"
+                                    type="text"
+                                    placeholder="Email"
+                                    value={props.newEmail}
+                                    onChange={props.handleNewEmail}
+                                    />
+                                </div>
+                            </div>
+                            <div className="ui right icon input"
+                        </div>
                         <div className="ui big button">
                             <i className="signup icon"></i>
                             Sign Up
