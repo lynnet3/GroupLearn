@@ -5,6 +5,9 @@ import  LogInForm  from "../components/LogInForm";
 
 class Main extends Component { //main is a test page to test user creation (Working)
     
+    state = {
+        returnedName: "Jones"
+    }
 
 render() {
 return (
@@ -14,8 +17,12 @@ return (
     <Form2>
     </Form2>
 
-    <LogInForm>
+    <LogInForm
+    returnedName = {this.state.returnedName}
+    >
     </LogInForm>
+
+    {this.state.returnedName}
 
 </Container>
 

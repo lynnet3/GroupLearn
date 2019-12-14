@@ -11,11 +11,10 @@ export default {
   },
   // Deletes the book with the given id
   getUser: function(userData) {
-    console.log("hi2")
     return axios.post("/api/users/login", { params: { q: userData } });
   },
   // Saves a user to the database
   saveUser: function(userData) {
-    return axios.post("/api/users", userData); //makes a post of the form's data to /api/users, defined in study/routes/api/users
+    return axios.post("/api/users/signIn", userData); //makes a post of the form's data to /api/users, defined in study/routes/api/users
   }
 };
