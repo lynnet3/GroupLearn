@@ -60,7 +60,18 @@ const Returning = props =>{
                                     />
                                 </div>
                             </div>
-                            <div className="ui right icon input"
+                            <div className="field">
+                                <div className="ui right icon input">
+                                    <input
+                                    name="newPass"
+                                    type="password"
+                                    placeholder="Password"
+                                    value={props.newPass}
+                                    onChange={props.handleNewPass}
+                                    />
+                                    <i className="lock icon"></i>
+                                </div>
+                            </div>
                         </div>
                         <div className="ui big button">
                             <i className="signup icon"></i>
