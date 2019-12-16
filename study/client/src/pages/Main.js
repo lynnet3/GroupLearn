@@ -1,31 +1,22 @@
 import React, { Component } from "react";
-import { Col, Row, Container } from "../components/Grid";
-import { Input, TextArea, FormBtn } from "../components/Form";
+import { Container } from "../components/Grid";
+import  Form2  from "../components/Form2/index.js";
+import  LogInForm  from "../components/LogInForm";
 
-class Main extends Component {
+class Main extends Component { //main is a test page to test user creation (Working)
+    
+
 render() {
 return (
 
 <Container fluid>
-    <Row>
-        <Col size="md-6">
-<form>
-    Log in:
-    <Input
-        //value={this.state.title}
-        //onChange={this.handleInputChange}
-        name="name"
-        placeholder="enter name here"
-        />
-        <Input
-        //value={this.state.title}
-        //onChange={this.handleInputChange}
-        name="password"
-        placeholder="enter name here"
-        />
-</form>
-        </Col>
-    </Row>
+
+    <Form2>
+    </Form2>
+
+    <LogInForm>
+    </LogInForm>
+
 </Container>
 
 )
