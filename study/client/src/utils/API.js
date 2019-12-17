@@ -1,13 +1,12 @@
 import axios from "axios";
 
 export default {
-  // Gets all books
-  getBooks: function() {
-    return axios.get("/api/studies");
+  findCookie: function() {
+    return axios.get("/api/users/cookie")
   },
   // Gets the book with the given id
-  getBook: function(id) {
-    return axios.get("/api/studies/" + id);
+  saveGroup: function(postData) {
+    return axios.post("/api/studies", postData);
   },
   // Deletes the book with the given id
   getUser: function(userData) {

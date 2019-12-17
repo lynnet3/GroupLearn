@@ -8,4 +8,7 @@ router.route("/signIn")
 router.route("/login")
   .post(studyController.findUser)
 
+  router.route("/cookie")
+  .get(studyController.findCookie)
+
   module.exports = router;

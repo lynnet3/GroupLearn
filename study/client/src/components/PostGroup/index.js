@@ -3,12 +3,12 @@ import { Col, Row, Container } from "../Grid";
 import { Input, TextArea, FormBtn } from "../Form";
 import API from "../../utils/API";
 
-class Form2 extends Component { //main is a test page to test user creation (Working)
+class PostGroup extends Component { //main is a test page to test user creation (Working)
 
     state = { //All the variables that will change
-      userName: "",
-        password: "",
-        email: ""
+        subject: "",
+        location: "",
+        content: ""
       };
     
 
@@ -17,14 +17,18 @@ event.preventDefault()
 
 const form = this.state
 
-if (form.userName && form.password && form.email) { //if all 3 areas are filled out, run this
-    console.log(form.userName) //log them
-    console.log(form.password)
-    console.log(form.email)
-    API.saveUser({ //call saveUser from ../utils/API
-      userName: form.userName, //insert the 3 data areas to saveUser
-      password: form.password,
-      email: form.email,
+if (form.subject && form.location && form.content) { //if all 3 areas are filled out, run this
+    console.log(form.subject) //log them
+    console.log(form.location)
+    console.log(form.content)
+    API.saveGroup({ //call saveGroup from ../utils/API
+      subject: form.subject, //insert the 3 data areas plus the user to saveGroup
+      location: form.location,
+      content: form.content,
+      user: {
+        userName: this.props.returnedName,
+        email: this.props.returnedEmail
+      }
     })
       .then(res => console.log(res.data))
       .catch(err => console.log(err));
@@ -47,22 +51,22 @@ return (
 <form>
     Make a request to start a studygroup
     <Input
-        value={this.state.name}
+        value={this.state.subject}
         onChange={this.handleInputChange}
-        name="userName"
-        placeholder="enter userName here"
+        name="subject"
+        placeholder="enter subject here"
         />
         <Input
-        value={this.state.password}
+        value={this.state.location}
         onChange={this.handleInputChange}
-        name="password"
-        placeholder="enter password here"
+        name="location"
+        placeholder="enter location here"
         />
-         <Input
-        value={this.state.email}
+         <TextArea
+        value={this.state.content}
         onChange={this.handleInputChange}
-        name="email"
-        placeholder="enter email here"
+        name="content"
+        placeholder="enter content here"
         />
         <FormBtn
         onClick={this.handleSubmit} //when this button is clicked, it submits the form

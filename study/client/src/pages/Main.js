@@ -4,11 +4,13 @@ import  Form2  from "../components/Form2/index.js";
 import  LogInForm  from "../components/LogInForm";
 import {FormBtn} from "../components/Form"
 import API from "../utils/API";
+import PostGroup from "../components/PostGroup";
 
 class Main extends Component { //main is a test page to test user creation (Working)
     
     state = {
-        returnedName: ""
+        returnedName: "",
+        returnedEmail: ""
     }
 
        handleSubmit = (event, userName, password) => { //whenever the form is submitted
@@ -23,20 +25,36 @@ if (userName && password) { //if all 3 areas are filled out, run this
       .then(res => {
         console.log(res.data)
         this.setState({
-          returnedName: res.data.dbModel[0].userName
+          returnedName: res.data.dbModel[0].userName,
+          returnedEmail: res.data.dbModel[0].email
         });
       })
       .catch(err => console.log(err));
     }
 };
 
-buttonBoop = () => console.log("this.state.returnedName")
+checkForUser = () => {
+  console.log("checkForUser")
+  API.findCookie()
+.then(res => {
+  this.setState({
+    returnedName: res.data.userName,
+    returnedEmail: res.data.email
+  });
+})
+.catch(err => console.log(err));
+}
 
+
+//something is wrong
 render() {
+  
 return (
 
 <Container fluid>
 You are logged in as: {this.state.returnedName}
+<br></br>
+Your email is: {this.state.returnedEmail}
     <Form2>
     </Form2>
 
@@ -46,10 +64,16 @@ You are logged in as: {this.state.returnedName}
     >
     </LogInForm>
 
+    <PostGroup
+    returnedName = {this.state.returnedName}
+    returnedEmail = {this.state.returnedEmail}
+    ></PostGroup>
+
     <button
-    onClick={() => console.log(this.state.returnedName)}>
-        oui
+    onClick={() => this.checkForUser()}>
+        get user saved to cookie
     </button>
+
 
 </Container>
 
