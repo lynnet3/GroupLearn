@@ -241,17 +241,18 @@
 <body>
     <div class="navbar">
         <a href="#home">Home</a>
-        <a href="#news">News</a>
+        <a href="#news">Profile</a>
         <div class="dropdown">
-          <button class="dropbtn">Dropdown
+          <button class="dropbtn">Subjects
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+            <a href="#">English</a>
+            <a href="#">History</a>
+            <a href="#">Science</a>
           </div>
         </div>
+        <a href="#Settings">Settings</a>
       </div>
 
 
@@ -266,27 +267,51 @@
         <h3>Math Board</h3>
         <div class ="MessageBoard">   
             <div class="container">
+                <div id ="AvatarInfo">
                 <img src="#" alt="Avatar" style="width:100%;">
+                <p>Name/Title</p>
+                <p>Email</p>
+                <p>Location</p>
+                </div>
                 <p>Hello. How are you today?</p>
                 <span class="time-right">11:00</span>
+                <button class = "Reply">Reply</button>
               </div>
               
               <div class="container darker">
-                <img src="#" alt="Avatar" class="right" style="width:100%;">
+                <div id ="AvatarInfo">
+                    <img src="#" alt="Avatar" style="width:100%;">
+                    <p>Name</p>
+                    <p>Email</p>
+                    <p>Location</p>
+                    </div>
                 <p>Hey! I'm fine. Thanks for asking!</p>
-                <span class="time-left">11:01</span>
+                <span class="time-right">11:01</span>
+                <button class = "Reply">Reply</button>
               </div>
               
               <div class="container">
-                <img src="#" alt="Avatar" style="width:100%;">
+                <div id ="AvatarInfo">
+                    <img src="#" alt="Avatar" style="width:100%;">
+                    <p>Name</p>
+                    <p>Email</p>
+                    <p>Location</p>
+                    </div>
                 <p>Sweet! So, what do you wanna do today?</p>
                 <span class="time-right">11:02</span>
+                <button class = "Reply">Reply</button>
               </div>
               
               <div class="container darker">
-                <img src="#" alt="Avatar" class="right" style="width:100%;">
+                <div id ="AvatarInfo">
+                    <img src="#" alt="Avatar" style="width:100%;">
+                    <p>Name</p>
+                    <p>Email</p>
+                    <p>Location</p>
+                    </div>
                 <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
-                <span class="time-left">11:05</span>
+                <span class="time-right">11:05</span>
+                <button class = "Reply">Reply</button>
               </div>
               
         </div>
@@ -299,7 +324,8 @@
     <div class="chat-popup" id="myForm">
       <form action="/action_page.php" class="form-container">
         <h1>Post Message</h1>
-    
+        <input class ="Titlefinder" placeholder="Title">
+        
         <label for="msg"><b>Message</b></label>
         <textarea placeholder="Type message.." name="msg" required></textarea>
     
