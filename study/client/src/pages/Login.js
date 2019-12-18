@@ -6,7 +6,7 @@ import {FormBtn} from "../components/Form"
 import API from "../utils/API";
 import PostGroup from "../components/PostGroup";
 
-class Main extends Component { //main is a test page to test user creation (Working)
+class Login extends Component { //main is a test page to test user creation (Working)
     
     state = {
         returnedName: "",
@@ -56,19 +56,12 @@ return (
 You are logged in as: {this.state.returnedName}
 <br></br>
 Your email is: {this.state.returnedEmail}
-    <Form2>
-    </Form2>
 
     <LogInForm
     handleSubmit={this.handleSubmit}
     returnedName = {this.state.returnedName}
     >
     </LogInForm>
-
-    <PostGroup
-    returnedName = {this.state.returnedName}
-    returnedEmail = {this.state.returnedEmail}
-    ></PostGroup>
 
     <button
     onClick={() => this.checkForUser()}>
@@ -82,4 +75,4 @@ Your email is: {this.state.returnedEmail}
 }
 }
 
-export default Main;
+export default Login;

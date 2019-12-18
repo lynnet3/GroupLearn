@@ -1,0 +1,191 @@
+
+/* Original CSS */
+body {
+    height:100%;
+
+}
+.container{
+    background-color:#000;
+    padding-bottom:350px;
+    background-image: url("../images/Bookshelf2.jpg");
+}
+
+label {
+    background-color:white;
+}
+
+.main-container{
+    text-align: center;
+    margin-top:200px;
+    margin-bottom:-250px; 
+    padding:30px;
+    border:solid royalblue 1px;
+    background-color:#fff;
+    color:#000;
+}
+
+.main-container:hover{
+    color:black;
+}
+
+.subject-container{
+    padding-top:100px;
+    margin-top:10px;
+}
+a:hover{
+    background-color:gold;
+}
+
+.ui form{
+    text-align:center;
+}
+
+science-btn, math-btn, art-btn, history-btn{
+    padding:2px;
+}
+
+.edit-icon{
+    font-size: 50px;
+    text-align: center;
+}
+
+.subject-btns{
+    text-align:center;
+    padding:10px;
+}
+
+.subject-heading{
+    font-family: 'Lora', serif;
+    font-size:70px;
+    color:#fff;
+    text-align: center;
+}
+.subject-heading:hover{
+    color:lightblue;
+}
+.subject-subheading:hover{
+    color:#fff;
+}
+.subject-subheading{
+    color:#fff;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+.subject-text:hover{
+    color:#000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#math-dd{
+    color:red;
+    background-color:#000;
+}
+
+#art-dd{
+    color:royalblue;
+    background-color:#000;
+}
+
+#science-dd{
+    color:green;
+    background-color:orange;
+}
+
+#history-dd{
+    color:orange;
+    background-color:#000;
+}
+
+#book-nav{
+    color:blue;
+}
+
+#friend-nav{
+    color:red;;
+}
+
+#logo-pic{
+    width:10%;
+}
+
+#logo-pic:hover{
+    /* background-image: url("../images/marble.jpg"); */
+    animation: gradientBG 15s ease infinite;
+}
+
+#search-nav{
+    color:#fff;
+}
+
+
+#nav{
+    color:#000;
+    background-color: #000;
+    background-image:url("../images/space.jpeg");
+}
+
+#place-nav{
+    background-color: #000;
+}
+
+#home-nav{
+    color:royalblue;
+    
+}
+
+#heading-title{
+    color:#fff;
+    background-color:gold;
+}
+
+.login-greet{
+    color:gold;
+    font-family: 'Lora', serif;
+    text-align:left;
+    
+}
+#title{
+    font-size: 100px;
+}
+
+#login-title{
+    text-align:center;
+}
+
+#login-nav, #signup-nav{
+    color:white;
+}
+
+#cat{
+    text-align:center;
+}
+
+#ui small image hide{
+    height:12px;
+}
+
+#main-quest{
+    background-color: black;
+    height:100%;
+}
+
+#root{
+    text-align: center;
+    color:beige;
+}
+
+#subjects-dd{
+    background-color: #000;
+    color:#fff;
+}
+
+#subjects-list{
+    color:#fff;
+    text-align: center;
+    background-color:#000;
+}
+
+.header, .description {
+    color:#fff;
+    background-color: #fff;
+}
