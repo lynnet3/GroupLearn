@@ -42,7 +42,7 @@ class NavBar extends React.Component {
           <a className="ui item" id="signup-nav" href="/signup">
             Sign Up
           </a>
-          <a className="ui item" id="login-nav">
+          <a className="ui item" id="login-nav" href="/login">
             Login
           </a>
         </div>
