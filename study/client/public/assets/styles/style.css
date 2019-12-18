@@ -1,0 +1,252 @@
+.login-greet {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    color:white;
+    position: relative;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
+  }
+  
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:white; left:200px; top:0px;}
+    50%  {background-color:black; left:200px; top:200px;}
+    75%  {background-color:white; left:0px; top:200px;}
+    100% {background-color:black; left:0px; top:0px; color: white;}
+  }
+  
+  /* Standard syntax */
+  @keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:white; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:white; left:0px; top:200px;}
+    100% {background-color:black; left:0px; top:0px;}
+  }
+
+/* Original CSS */
+body {
+    height:100%;
+
+}
+.container{
+    background-color:#000;
+    padding-bottom:350px;
+    background-image: url("../images/Bookshelf2.jpg");
+}
+
+label {
+    background-color:white;
+}
+
+.main-container{
+    text-align: center;
+    margin-top:200px;
+    margin-bottom:-250px; 
+    padding:30px;
+    border:solid royalblue 1px;
+    background-color:#fff;
+    color:#000;
+}
+
+.main-container:hover{
+    color:black;
+}
+
+.subject-container{
+    padding-top:100px;
+    margin-top:10px;
+}
+a:hover{
+    background-color:gold;
+}
+
+.ui form{
+    text-align:center;
+}
+
+science-btn, math-btn, art-btn, history-btn{
+    padding:2px;
+}
+
+.edit-icon{
+    font-size: 50px;
+    text-align: center;
+}
+
+#subject-btns{
+    text-align:center;
+    padding:10px;
+    width: 100px;
+    height: 220px;
+    background: red;
+    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s;
+}
+
+#math-btn, #art-btn, #science-btn, #history-btn{
+
+}
+
+/* div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    /* transition: width 2s;
+  } */ 
+  
+  #subject-btns:hover {
+    width: 100%;
+  }
+
+
+
+.subject-heading{
+    font-family: 'Lora', serif;
+    font-size:70px;
+    color:lightblue;
+    text-align: center;
+}
+.subject-heading:hover{
+    color:#fff;
+}
+.subject-subheading:hover{
+    color:lightblue;
+}
+.subject-subheading{
+    color:#fff;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+.subject-text:hover{
+    color:#000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#math-dd{
+    color:red;
+    background-color:#000;
+}
+
+#art-dd{
+    color:royalblue;
+    background-color:#000;
+}
+
+#science-dd{
+    color:green;
+    background-color:orange;
+}
+
+#history-dd{
+    color:orange;
+    background-color:#000;
+}
+
+#book-nav{
+    color:blue;
+}
+
+#friend-nav{
+    color:red;;
+}
+
+#logo-pic{
+    width:10%;
+}
+
+#logo-pic:hover{
+    /* background-image: url("../images/marble.jpg"); */
+    animation: gradientBG 15s ease infinite;
+}
+
+#search-nav{
+    color:#fff;
+}
+
+
+#nav{
+    color:#000;
+    background-color: #000;
+    background-image:url("../images/space.jpeg");
+    width:100%;
+}
+
+#place-nav{
+    background-color: #fff;
+}
+
+#home-nav{
+    color:royalblue;
+    
+}
+
+#heading-title{
+    color:#fff;
+    background-color:gold;
+}
+
+.login-greet{
+    color:white;
+    font-family: 'Lora', serif;
+    text-align:left;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    position: relative;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
+    
+}
+
+#title{
+    font-size: 100px;
+}
+
+#login-title{
+    text-align:center;
+}
+
+#login-nav, #signup-nav{
+    color:white;
+}
+
+#cat{
+    text-align:center;
+}
+
+#ui small image hide{
+    height:12px;
+}
+
+#main-quest{
+    background-color: black;
+    height:100%;
+}
+
+#root{
+    text-align: center;
+    color:beige;
+}
+
+#subjects-dd{
+    background-color: #000;
+    color:#fff;
+}
+
+#subjects-list{
+    color:#fff;
+    text-align: center;
+}
+
+.header, .description {
+    color:#fff;
+    background-color: #fff;
+}
