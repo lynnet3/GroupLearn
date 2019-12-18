@@ -169,6 +169,9 @@
   display: block;
 }
 
+
+
+
 /* post message button */
 .open-button {
   background-color: #555;
@@ -239,7 +242,7 @@
 }
   </style>
 <body>
-    <div class="navbar">
+    <div class="navbar" data-component="Navbar">
         <a href="#home">Home</a>
         <a href="#news">Profile</a>
         <div class="dropdown">
@@ -263,9 +266,9 @@
     </div>
 
 
-    <div class = "jumbotron">
+    <div class = "jumbotron" data-component="Jumbotron">
         <h3>Math Board</h3>
-        <div class ="MessageBoard">   
+        <div class ="MessageBoard" data-component="MessageBoard">   
             <div class="container">
                 <div id ="AvatarInfo">
                 <img src="#" alt="Avatar" style="width:100%;">
@@ -321,7 +324,7 @@
 
     <button class="open-button" onclick="openForm()">POST MESSAGE</button>
 
-    <div class="chat-popup" id="myForm">
+    <div class="chat-popup" id="myForm" data-component="ChatPopup">
       <form action="/action_page.php" class="form-container">
         <h1>Post Message</h1>
         <input class ="Titlefinder" placeholder="Title">
@@ -329,8 +332,8 @@
         <label for="msg"><b>Message</b></label>
         <textarea placeholder="Type message.." name="msg" required></textarea>
     
-        <button type="submit" class="btn">Send</button>
-        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        <button type="submit" class="btn" data-component="Submit">Send</button>
+        <button type="button" class="btn cancel" onclick="closeForm()" data-component="Cancel">Close</button>
       </form>
     </div>
     
