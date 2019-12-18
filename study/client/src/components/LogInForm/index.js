@@ -18,8 +18,7 @@ handleInputChange = event => { //Allows the textboxes to be used.
       [name]: value
     });
   };
-    
-
+  
 render() {
 return (
 
@@ -48,9 +47,9 @@ return (
         </Col>
     </Row> //returnedName is from the response
 
-
 )
 }
+
 }
 
 export default LogInForm;

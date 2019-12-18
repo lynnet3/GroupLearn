@@ -8,8 +8,14 @@
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "express-session": "^1.17.0",
+<<<<<<< HEAD
     "mongodb": "^3.3.5",
     "mongoose": "^5.8.0",
+=======
+    "i": "^0.3.6",
+    "mongodb": "^3.3.5",
+    "mongoose": "^5.8.1",
+>>>>>>> 2bf74cd7933359f576ca61e3d44896510d001b21
     "node": "^13.3.0",
     "react": "^16.12.0"
   },
