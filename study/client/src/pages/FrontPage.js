@@ -25,6 +25,10 @@ class FrontPage extends Component { //main is a test page to test user creation 
       .catch(err => console.log(err));
       }
     
+      componentWillMount(){
+        this.checkForUser()
+      }
+
     render() {
         return (
         <div className="container">
@@ -34,11 +38,6 @@ class FrontPage extends Component { //main is a test page to test user creation 
         returnedName = {this.state.returnedName}>
         </UserGreet>
         <SubjectBar/> 
-
-        <button
-    onClick={() => this.checkForUser()}>
-        get user saved to cookie
-    </button>
         </div>
         </div>
       );
