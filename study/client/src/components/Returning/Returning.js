@@ -31,7 +31,10 @@ const Returning = props =>{
                                     <i className="lock icon"></i>
                                 </div>
                             </div>
-                            <div className="ui blue submit button">Login</div>
+                            <button 
+                            type="submit"
+                            onClick={props.handleReturnSubmit}
+                            className="ui blue submit button">Login</button>
                         </div>
                     </div>
                     
@@ -73,10 +76,13 @@ const Returning = props =>{
                                 </div>
                             </div>
                         </div>
-                        <div className="ui big button">
+                        <button 
+                        type="submit"
+                        onClick={props.handleNewSubmit}
+                        className="ui big button">
                             <i className="signup icon"></i>
                             Sign Up
-                        </div>
+                        </button>
                     </div>
                     <div class="ui vertical divider">
                         Or
