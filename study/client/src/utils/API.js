@@ -1,21 +1,19 @@
 import axios from "axios";
 
 export default {
-  // Gets all books
-  getBooks: function() {
-    return axios.get("/api/studies");
+  findCookie: function() {
+    return axios.get("/api/users/cookie")
   },
   // Gets the book with the given id
-  getBook: function(id) {
-    return axios.get("/api/studies/" + id);
+  saveGroup: function(postData) {
+    return axios.post("/api/studies", postData);
   },
   // Deletes the book with the given id
   getUser: function(userData) {
-    console.log("hi2")
     return axios.post("/api/users/login", { params: { q: userData } });
   },
   // Saves a user to the database
   saveUser: function(userData) {
-    return axios.post("/api/users", userData); //makes a post of the form's data to /api/users, defined in study/routes/api/users
+    return axios.post("/api/users/signIn", userData); //makes a post of the form's data to /api/users, defined in study/routes/api/users
   }
 };

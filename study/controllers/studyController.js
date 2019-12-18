@@ -2,6 +2,18 @@ const db = require("../models");
 
 // Defining methods for the studyController
 module.exports = {
+  findCookie: function(req, res) {
+//Here
+console.log("It runs")
+if(req.session.userName) {
+  console.log("cookie"),
+  console.log(req.session.userName),
+    res.json(req.session)
+}
+else {
+  console.log("no username saved")
+}
+  },
   findAll: function(req, res) {
     db.Study
       .find(req.query)
@@ -35,14 +47,18 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
    findUser: function(req, res) {
-    console.log(req.body.params.q.userName)
-    console.log(req.body.params.q.password)
+    console.log("Session: ___l")
+    const response = {session: req.session}
     //console.log(JSON.parse(req.query.q).userName)
     db.User
       .find({userName: req.body.params.q.userName, password: req.body.params.q.password})
       .sort({ date: -1 })
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+      .then(dbModel => {
+      response.dbModel = dbModel,
+      req.session.userName = response.dbModel[0].userName,
+      req.session.email = response.dbModel[0].email,
+      res.json(response);
+    }).catch(err => res.status(422).json(err));
   },
   findAllUsers: function(req, res) {
     db.User
@@ -52,12 +68,12 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   createUser: function(req, res) {
+    console.log("Session: ___c")
+    console.log(req)
     db.User.find({
         userName: req.body.userName
     }).then(function(results) {
       if (results.length > 0) {
-        console.log("Results")
-        console.log(results)
         res.send("Username taken, please try something else");
       } else {
         db.User
