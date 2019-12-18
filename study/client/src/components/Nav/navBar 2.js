@@ -39,11 +39,11 @@ class NavBar extends React.Component {
             Friends
             <i className="child icon" id="friend-nav"></i>
           </a>
+          <a className="ui item" id="signup-nav" href="/signup">
+            Sign Up
+          </a>
           <a className="ui item" id="login-nav">
             Login
-          </a>
-          <a className="ui item" id="logout-nav">
-            Logout
           </a>
         </div>
       </div>

@@ -1,23 +1,22 @@
 import React from 'react';
 import Main from "./pages/Main";
+import FrontPage from "./pages/FrontPage";
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import NoMatch from "./pages/NoMatch";
-import NavBar from "./components/Nav/navBar 2";
-import Login from "./components/LogInForm/Login";
-import UserGreet from './components/UserGreet/userGreet';
-import SubjectBar from './components/SubjectBar/subjectBar';
-import Bookshelf2 from "../src/Bookshelf2.jpg";
-
+import Nav from "./components/Nav";
 function App() {
   return (
-    <div className="container">
-    <div>
-    <NavBar/>
-    <UserGreet/>
-    <SubjectBar/> 
-    </div>
-    </div>
+    <Router>
+      <div>
+        <Nav />
+        <Switch>
+          <Route exact path="/" component={FrontPage}/>
+          <Route exact path="/signup" component={Main} />
+          <Route exact path="/subjects/:id" component={Main} />
+          <Route component={NoMatch} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
-
 export default App;
