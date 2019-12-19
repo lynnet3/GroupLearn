@@ -39,46 +39,8 @@ const Returning = props =>{
                     </div>
                     
                     <div class="middle aligned column">
-                        <div className="ui form">
-                            <div className="field">
-                                <div className="ui right icon input">
-                                    <input 
-                                    name="userName"
-                                    type="text"
-                                    placeholder="Username"
-                                    value={props.newUser}
-                                    onChange={props.handleNewUser}
-                                    />
-                                    <i className="user icon"></i>
-                                </div>
-                            </div>
-                            <div className="field">
-                                <div className="ui right icon input">
-                                    <input
-                                    name="newEmail"
-                                    type="text"
-                                    placeholder="Email"
-                                    value={props.newEmail}
-                                    onChange={props.handleNewEmail}
-                                    />
-                                </div>
-                            </div>
-                            <div className="field">
-                                <div className="ui right icon input">
-                                    <input
-                                    name="newPass"
-                                    type="password"
-                                    placeholder="Password"
-                                    value={props.newPass}
-                                    onChange={props.handleNewPass}
-                                    />
-                                    <i className="lock icon"></i>
-                                </div>
-                            </div>
-                        </div>
                         <button 
-                        type="submit"
-                        onClick={props.handleNewSubmit}
+                        type="button"
                         className="ui big button">
                             <i className="signup icon"></i>
                             Sign Up
