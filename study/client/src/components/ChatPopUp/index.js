@@ -1,6 +1,6 @@
 import React from "react";
-import Submit from "./Submit";
-import Cancel from "./Cancel";
+import Submit from "../Submit";
+import Cancel from "../Cancel";
 
 class ChatPopup extends React.Component {
   render() {

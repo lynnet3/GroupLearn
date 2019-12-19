@@ -1,14 +1,15 @@
 import React from "react";
+import MessageBoard from "../MessageBoard";
 
-function Jumbotron({ children }) {
-  return (
-    <div
-      style={{ height: 300, clear: "both", paddingTop: 120, textAlign: "center" }}
-      className="jumbotron"
-    >
-      {children}
-    </div>
-  );
+class Jumbotron extends React.Component {
+  render() {
+    return (
+      <div className="jumbotron">
+        <h3>Math Board</h3>
+        <MessageBoard></MessageBoard>
+      </div>
+    );
+  }
 }
 
 export default Jumbotron;

@@ -1,20 +1,24 @@
 import React, { Component } from "react";
-import Nav, {Component} from "../components/Nav/navBar 2";
-import submit, {Component} from "./components/Submit Button/index";
-import Cancel, {component} from "./components/Cancel Button/index";
-import MessageBoard, {component} from "./components/MessageBoard/index";
-import ChatPopup from "./components/ChatPopUp/index";
-import Jumbotron from "./components/Jumbotron/index";
+import Nav from "../components/Nav/navBar 2";
+import NavBar from "../components/Navbar";
+import Header from "../components/Header";
+import submit from "../components/Submit";
+import Cancel from "../components/Cancel";
+import MessageBoard from "../components/MessageBoard";
+import ChatPopup from "../components/ChatPopUp";
+import Jumbotron from "../components/Jumbotron";
 
 class Chatroom extends Component {
 
     render(){
         return (
             <div className= "container">
-            <navBar/>
+            <NavBar/>
             <Header/>
             </div>
         
         );
     }
 }
+
+export default Chatroom;
