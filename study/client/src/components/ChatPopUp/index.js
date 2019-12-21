@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css"
 import Submit from "../Submit";
 import Cancel from "../Cancel";
 
