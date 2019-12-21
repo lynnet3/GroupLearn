@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {Col, Row, Container} from "../Grid";
 import {Input, TextArea, FormBtn} from "../Form"
-
+class Returning extends Component{
 state = {
     username:"",
     password:""
@@ -13,10 +13,12 @@ handleSubmit = event =>{
 
 handleInputChange = event => {
     const {name, value } = event.target;
-    this.state
-}
+    this.setState({
+        [name]: value
+    });
+};
 
-const Returning = props =>{
+render(){
     return( 
        <div className="loginForm">
         <form className="returning">
@@ -68,5 +70,6 @@ const Returning = props =>{
             </button>
     </div>
     )
+}
 }
 export default Returning;
