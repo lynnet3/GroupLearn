@@ -6,6 +6,7 @@ class SubjectBar extends React.Component {
       <div className="subject-container">
         <h4 className="subject-heading">Choose Your Subjects</h4>
         <div className="ui centered" id="subject-btns">
+         <a href="/subjects/Math">
           <div
             className="ui red huge  animated button"
             tabIndex={0}
@@ -18,6 +19,7 @@ class SubjectBar extends React.Component {
               <div className="subject-text">MATH</div>
             </div>
           </div>
+          </a>
           <div
             className="ui blue huge animated button"
             tabIndex={0}

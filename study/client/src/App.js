@@ -1,5 +1,6 @@
 import React from 'react';
 import Main from "./pages/Main";
+import MakePost from "./pages/MakePost"
 import FrontPage from "./pages/FrontPage";
 import Signup from "./pages/Signup"
 import Login from "./pages/Login"
@@ -15,7 +16,7 @@ function App() {
           <Route exact path="/" component={FrontPage}/>
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/subjects/:id" component={Main} />
+          <Route exact path="/subjects/Math" component={MakePost} />
           <Route component={NoMatch} />
         </Switch>
       </div>

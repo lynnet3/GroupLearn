@@ -53,9 +53,6 @@ render() {
 return (
 
 <Container fluid>
-You are logged in as: {this.state.returnedName}
-<br></br>
-Your email is: {this.state.returnedEmail}
 
     <LogInForm
     handleSubmit={this.handleSubmit}
@@ -63,10 +60,6 @@ Your email is: {this.state.returnedEmail}
     >
     </LogInForm>
 
-    <button
-    onClick={() => this.checkForUser()}>
-        get user saved to cookie
-    </button>
 
 
 </Container>
