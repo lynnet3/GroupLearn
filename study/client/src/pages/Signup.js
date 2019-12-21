@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container } from "../components/Grid";
 import  Form2  from "../components/Form2/index.js";
-import  LogInForm  from "../components/LogInForm";
+import New from "../components/New"
 import {FormBtn} from "../components/Form"
 import API from "../utils/API";
 import PostGroup from "../components/PostGroup";
@@ -14,9 +14,9 @@ render() {
 return (
 
 <Container fluid>
-
-    <Form2>
-    </Form2>
+Create a new account
+    <New>
+    </New>
 
 </Container>
 

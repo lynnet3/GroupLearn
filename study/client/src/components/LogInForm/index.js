@@ -84,11 +84,11 @@ return (
 //         >Submit</FormBtn>
 // </form>
 
-{this.state.returnedName}
+  {this.state.returnedName}
     //     </Col>
     // </Row> //returnedName is from the response
 
-)
+
 }
 
 }

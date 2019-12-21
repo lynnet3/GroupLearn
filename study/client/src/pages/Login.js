@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Container } from "../components/Grid";
 import  Form2  from "../components/Form2/index.js";
-import  LogInForm  from "../components/LogInForm";
-import {FormBtn} from "../components/Form"
+import {FormBtn} from "../components/Form";
+import Returning from "../components/Returning"
 import API from "../utils/API";
 import PostGroup from "../components/PostGroup";
 
@@ -54,12 +54,11 @@ return (
 
 <Container fluid>
 
-    <LogInForm
+    <Returning
+ 
     handleSubmit={this.handleSubmit}
-    returnedName = {this.state.returnedName}
     >
-    </LogInForm>
-
+    </Returning>
 
 
 </Container>
