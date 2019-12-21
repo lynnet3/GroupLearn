@@ -11,23 +11,23 @@ class Chatroom extends Component {
 
     render(){
         return (
+            <Container fluid>
             <div className= "container">
             <Nav/>
             <Header/>
             <Jumbotron>
-            </Jumbotron>
             <MessageBoard>
             </MessageBoard>
+            </Jumbotron>
             <ChatPopup>
             <Submit>
+            </Submit>
            <Cancel>
          </Cancel>
-            </Submit>
             </ChatPopup>
 
-
             </div>
-        
+            </Container>
         );
     }
 }
