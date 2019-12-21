@@ -1,4 +1,20 @@
-import React from "react";
+import React, {Component} from "react";
+import {Col, Row, Container} from "../Grid";
+import {Input, TextArea, FormBtn} from "../Form"
+
+state = {
+    username:"",
+    password:""
+};
+
+handleSubmit = event =>{
+    event.preventDefault()
+}
+
+handleInputChange = event => {
+    const {name, value } = event.target;
+    this.state
+}
 
 const Returning = props =>{
     return( 
