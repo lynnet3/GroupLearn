@@ -1,9 +1,10 @@
 import React from "react";
 
 const Returning = props =>{
-    return(
+    return( 
+       <div className="loginForm">
         <form className="returning">
-            <div className="ui placeholder segment">
+            <div className="ui center aligned basic segement">
                 <div className="ui two column very relaxed stackable grid">
                     <div className="column">
                         <div className="ui form">
@@ -37,22 +38,19 @@ const Returning = props =>{
                             className="ui blue submit button">Login</button>
                         </div>
                     </div>
-                    
-                    <div class="middle aligned column">
-                        <button 
-                        type="button"
-                        className="ui big button">
-                            <i className="signup icon"></i>
-                            Sign Up
-                        </button>
-                    </div>
-                    <div class="ui vertical divider">
-                        Or
-                    </div>
                 </div>
             </div>
         </form>
+            <div className="ui horizontal divider">
+            Or
+            </div>
+            <button
+            type="button"
+            className="ui big button">
+            <i className="signup icon"></i>
+            Sign Up
+            </button>
+    </div>
     )
 }
-
 export default Returning;
