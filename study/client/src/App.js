@@ -11,12 +11,11 @@ function App() {
   return (
     <Router>
       <div>
-        <Nav />
         <Switch>
           <Route exact path="/" component={FrontPage}/>
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/subjects/Math" component={MakePost} />
+          <Route path="/subjects" component={MakePost} />
           <Route component={NoMatch} />
         </Switch>
       </div>
