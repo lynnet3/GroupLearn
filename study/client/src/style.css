@@ -33,7 +33,7 @@ body {
     height:100%;
 
 }
-
+.container{
     background-color:#000;
     padding-bottom:350px;
     /* background-image: url("../images/Bookshelf2.jpg"); */
@@ -197,7 +197,7 @@ science-btn, math-btn, art-btn, history-btn{
     text-align:left;
     width: 100px;
     height: 100px;
-     black;
+    background-color: black;
     position: relative;
     -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
     -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */

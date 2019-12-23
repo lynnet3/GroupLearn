@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Col, Row, Container } from "../Grid";
-import { Input, TextArea, FormBtn } from "../Form";
+import { Col, Row} from "../Grid";
+import { Input, FormBtn } from "../Form";
 import API from "../../utils/API";
 
 class Form2 extends Component { //main is a test page to test user creation (Working)

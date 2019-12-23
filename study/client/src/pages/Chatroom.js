@@ -7,8 +7,42 @@ import MessageBoard from "../components/MessageBoard";
 import ChatPopUp from "../components/ChatPopUp";
 import Jumbotron from "../components/Jumbotron";
 import Header from "../components/Header";
+import API from "../utils/API";
 
 class Chatroom extends Component {
+
+  state = {
+data: { data: [] }
+  }
+
+    checkForUser = () => {
+        console.log("checkForUser")
+        API.findCookie()
+      .then(res => {
+        this.setState({
+          returnedName: res.data.userName,
+          returnedEmail: res.data.email
+        });
+      })
+      .catch(err => console.log(err));
+      }
+    
+      getAllPosts = () => {
+        console.log("checkForPosts")
+        API.getAllPosts()
+      .then(res => {
+          console.log(res)
+        this.setState({
+          data: res
+        });
+      })
+      .catch(err => console.log(err));
+      }
+    
+      componentWillMount(){
+        this.checkForUser()
+        this.getAllPosts()
+      }
 
     render(){
         return (
@@ -17,7 +51,9 @@ class Chatroom extends Component {
             <Nav/>
             <Header/>
             <Jumbotron>
-            <MessageBoard>
+            <MessageBoard
+            data = {this.state.data}>
+            >
             </MessageBoard>
             </Jumbotron>
             <ChatPopUp>
@@ -29,7 +65,7 @@ class Chatroom extends Component {
 
             </div>
             </Container>
-        );
+        )
     }
 }
 export default Chatroom;

@@ -2,18 +2,24 @@ import React from "react";
 import Post from "../Post";
 import "./style.css"
 class MessageBoard extends React.Component {
+
   render() {
+    console.log("hiyah friend")
+    if (this.props.data.data) {
+    console.log(this.props.data.data)
+  }
     return (
       <div className="MessageBoard">
+        {this.props.data.data.map(post => (
         <Post
-        name = "fred"
-        email = "fred@hotmail.com"
-        location = "Starbucks"
-        content = "Hey, who wants to meet up for coffee and reading european history?"
+        key={post._id}
+         name = {post.user.userName}
+         email = {post.user.email}
+         location = {post.location}
+         content = {post.content}
         >
-        </Post>
-        <Post></Post>
-        <Post></Post>
+        </Post> 
+        ))}
       </div>
     );
   }

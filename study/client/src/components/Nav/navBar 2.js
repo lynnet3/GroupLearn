@@ -1,11 +1,10 @@
 import React from "react";
-import {Link} from "react-router";
 
 class NavBar extends React.Component {
   render() {
     return (
       <div className="ui secondary  menu" id="nav">
-        <a className="active item">
+        <a className="active item" href="/">
           <i className="home icon" id="home-nav" />
         </a>
         <div className="right menu">
@@ -35,7 +34,7 @@ class NavBar extends React.Component {
               </div>
             </div>
           </div>
-          <a className="item" id="subjects-dd">
+          <a className="item" id="subjects-dd" href="/">
             Friends
             <i className="child icon" id="friend-nav"></i>
           </a>
