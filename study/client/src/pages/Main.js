@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Container } from "../components/Grid";
 import  Form2  from "../components/Form2/index.js";
-import {FormBtn} from "../components/Form"
 import API from "../utils/API";
 import PostGroup from "../components/PostGroup";
 
