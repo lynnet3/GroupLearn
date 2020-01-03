@@ -14,8 +14,8 @@ function App() {
           <Route exact path="/" component={FrontPage}/>
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/chat" component={Chat} />
-          <Route path="/subjects" component={MakePost} />
+          <Route exact path="/chat" component={MakePost} />
+          <Route exact path="/subjects/:subject" component={Chat} />
           <Route component={NoMatch} />
         </Switch>
       </div>

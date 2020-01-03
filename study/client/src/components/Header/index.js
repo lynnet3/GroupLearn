@@ -6,7 +6,7 @@ class Header extends React.Component {
     return (
       <div id="header-content">
         <header>
-          <h1>Math Group</h1>
+          <h1>{this.props.subject} Group</h1>
         </header>
       </div>
     );

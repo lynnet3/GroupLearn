@@ -10,6 +10,7 @@ export default {
   },
   //searches for a user matching the given info
   getUser: function(userData) {
+    console.log(userData)
     return axios.post("/api/users/login", { params: { q: userData } });
   },
   getAll: function() {
@@ -17,7 +18,7 @@ export default {
   },
   //gets all study posts, can add more specific routes for later eg: /api/studies/math
   getAllPosts: function() {
-    return axios.get("api/studies")
+    return axios.get("/api/studies")
   },
   // Saves a user to the database
   saveUser: function(userData) {

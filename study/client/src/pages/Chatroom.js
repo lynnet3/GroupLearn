@@ -7,12 +7,14 @@ import MessageBoard from "../components/MessageBoard";
 import ChatPopUp from "../components/ChatPopUp";
 import Jumbotron from "../components/Jumbotron";
 import Header from "../components/Header";
+import PostGroup from "../components/PostGroup";
 import API from "../utils/API";
 
 class Chatroom extends Component {
 
   state = {
-data: { data: [] }
+data: { data: [] },
+subject: this.props.match.params.subject
   }
 
     checkForUser = () => {
@@ -49,21 +51,21 @@ data: { data: [] }
             <Container fluid>
             <div className= "container">
             <Nav/>
-            <Header/>
-            <Jumbotron>
+            <Header
+            subject = {this.state.subject}>
+            </Header>
+            
             <MessageBoard
             data = {this.state.data}>
-            >
             </MessageBoard>
-            </Jumbotron>
-            <ChatPopUp>
-            <Submit>
-            </Submit>
-           <Cancel>
-         </Cancel>
-            </ChatPopUp>
-
+            
             </div>
+            <div>
+            <PostGroup
+          returnedName = {this.state.returnedName}
+          returnedEmail = {this.state.returnedEmail}
+          ></PostGroup>
+          </div>
             </Container>
         )
     }

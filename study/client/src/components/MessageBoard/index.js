@@ -20,7 +20,7 @@ class MessageBoard extends React.Component {
         >
         </Post> 
         ))}
-      </div>
+      </div> 
     );
   }
 }
