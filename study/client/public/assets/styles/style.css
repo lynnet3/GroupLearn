@@ -36,7 +36,7 @@ body {
 .container{
     background-color:#000;
     padding-bottom:350px;
-    background-image: url("../images/Bookshelf2.jpg");
+    background-image: url("../images/Bookshelf2.jpg"); /* This effects every single page */
 }
 
 label {
@@ -233,7 +233,7 @@ science-btn, math-btn, art-btn, history-btn{
 
 #root{
     text-align: center;
-    color:beige;
+    color:black;
 }
 
 #subjects-dd{

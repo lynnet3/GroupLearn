@@ -3,7 +3,7 @@ const studyController = require("../../controllers/studyController");
 
 // Matches with "/api/studies"
 router.route("/")
-  .get(studyController.findAll)
+  .get(studyController.findAllPosts)
   .post(studyController.create);
 
 // Matches with "/api/studies/:id"

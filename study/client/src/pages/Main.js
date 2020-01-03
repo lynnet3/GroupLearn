@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { Container } from "../components/Grid";
 import  Form2  from "../components/Form2/index.js";
-import  LogInForm  from "../components/LogInForm";
-import {FormBtn} from "../components/Form"
 import API from "../utils/API";
 import PostGroup from "../components/PostGroup";
 
@@ -59,11 +57,7 @@ Your email is: {this.state.returnedEmail}
     <Form2>
     </Form2>
 
-    <LogInForm
-    handleSubmit={this.handleSubmit}
-    returnedName = {this.state.returnedName}
-    >
-    </LogInForm>
+ 
 
     <PostGroup
     returnedName = {this.state.returnedName}
