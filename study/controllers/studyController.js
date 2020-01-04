@@ -3,7 +3,6 @@ const db = require("../models");
 // Defining methods for the studyController
 module.exports = {
   findCookie: function(req, res) {
-//Here
 console.log("It runs")
 if(req.session.userName) {
   console.log("cookie"),
@@ -14,30 +13,28 @@ else {
   console.log("no username saved")
 }
   },
-  findAll: function(req, res) {
-    db.Study
-      .find(req.query)
-      .sort({ date: -1 })
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-  },
-  findById: function(req, res) {
-    db.Study
-      .findById(req.params.id)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-  },
   create: function(req, res) {
     db.Study
       .create(req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  update: function(req, res) {
+  findAllPosts: function(req, res) {
+    console.log("findAllPosts")
     db.Study
-      .findOneAndUpdate({ _id: req.params.id }, req.body)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+    .find({})
+    .sort({ date: -1 })
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
+  },
+  findSubjectPosts: function(req, res) {
+    console.log("findPosts")
+    console.log(req.body.params.q.subject)
+    db.Study
+    .find({subject: req.body.params.q.subject})
+    .sort({ date: -1 })
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
   },
   remove: function(req, res) {
     db.Study
@@ -49,7 +46,7 @@ else {
    findUser: function(req, res) {
     console.log("Session: ___l")
     const response = {session: req.session}
-    //console.log(JSON.parse(req.query.q).userName)
+    console.log(req.body)
     db.User
       .find({userName: req.body.params.q.userName, password: req.body.params.q.password})
       .sort({ date: -1 })

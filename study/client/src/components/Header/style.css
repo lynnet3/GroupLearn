@@ -1,0 +1,8 @@
+#header-content{
+    background-image: linear-gradient(to right, #c770d8, #6066ff, #7fefc8);
+    border-radius: 10px;
+    border: 12px ridge #e2e2e2;
+    box-shadow: 5px 5px 10px #272B30;
+    text-align: center;
+    position: relative;
+  }
