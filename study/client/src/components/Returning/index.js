@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { Col, Row, Container } from "../Grid";
-import { Input, TextArea, FormBtn } from "../Form";
 class Returning extends Component { //main is a test page to test user creation (Working)
 
     state = { //All the variables that will change

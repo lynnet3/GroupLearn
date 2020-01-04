@@ -4,11 +4,7 @@ body {
     height:100%;
 
 }
-.container{
-    background-color:#000;
-    padding-bottom:350px;
-    background-image: url("../images/Bookshelf2.jpg");
-}
+
 
 label {
     background-color:white;

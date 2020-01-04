@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Col, Row, Container } from "../Grid";
+import { Col, Row} from "../Grid";
 import { Input, TextArea, FormBtn } from "../Form";
 import API from "../../utils/API";
 
@@ -17,12 +17,12 @@ event.preventDefault()
 
 const form = this.state
 
-if (form.subject && form.location && form.content) { //if all 3 areas are filled out, run this
+if (form.location && form.content) { //if all 3 areas are filled out, run this
     console.log(form.subject) //log them
     console.log(form.location)
     console.log(form.content)
     API.saveGroup({ //call saveGroup from ../utils/API
-      subject: form.subject, //insert the 3 data areas plus the user to saveGroup
+      subject: this.props.subject, //insert the 3 data areas plus the user to saveGroup
       location: form.location,
       content: form.content,
       user: {
@@ -50,12 +50,6 @@ return (
         <Col size="md-3">
 <form>
     Make a request to start a studygroup
-    <Input
-        value={this.state.subject}
-        onChange={this.handleInputChange}
-        name="subject"
-        placeholder="enter subject here"
-        />
         <Input
         value={this.state.location}
         onChange={this.handleInputChange}
