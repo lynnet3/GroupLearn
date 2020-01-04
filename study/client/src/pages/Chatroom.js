@@ -7,12 +7,14 @@ import MessageBoard from "../components/MessageBoard";
 import ChatPopUp from "../components/ChatPopUp";
 import Jumbotron from "../components/Jumbotron";
 import Header from "../components/Header";
+import PostGroup from "../components/PostGroup";
 import API from "../utils/API";
 
 class Chatroom extends Component {
 
   state = {
-data: { data: [] }
+data: { data: [] },
+subject: this.props.match.params.subject
   }
 
     checkForUser = () => {
@@ -27,9 +29,11 @@ data: { data: [] }
       .catch(err => console.log(err));
       }
     
-      getAllPosts = () => {
+      getSubjectPosts = () => {
         console.log("checkForPosts")
-        API.getAllPosts()
+        API.getSubjectPosts({
+          subject: this.state.subject
+        })
       .then(res => {
           console.log(res)
         this.setState({
@@ -41,7 +45,7 @@ data: { data: [] }
     
       componentWillMount(){
         this.checkForUser()
-        this.getAllPosts()
+        this.getSubjectPosts()
       }
 
     render(){
@@ -49,21 +53,22 @@ data: { data: [] }
             <Container fluid>
             <div className= "container">
             <Nav/>
-            <Header/>
-            <Jumbotron>
+            <Header
+            subject = {this.state.subject}>
+            </Header>
+            
             <MessageBoard
             data = {this.state.data}>
-            >
             </MessageBoard>
-            </Jumbotron>
-            <ChatPopUp>
-            <Submit>
-            </Submit>
-           <Cancel>
-         </Cancel>
-            </ChatPopUp>
-
+            
             </div>
+            <div>
+            <PostGroup
+          subject = {this.state.subject}
+          returnedName = {this.state.returnedName}
+          returnedEmail = {this.state.returnedEmail}
+          ></PostGroup>
+          </div>
             </Container>
         )
     }

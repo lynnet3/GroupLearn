@@ -13,4 +13,5 @@ router.route("/login")
 // Matches with "/api/users"
   router.route("/")
   .get(studyController.findAllUsers)
+
   module.exports = router;

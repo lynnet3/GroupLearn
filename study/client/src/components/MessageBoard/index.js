@@ -14,13 +14,14 @@ class MessageBoard extends React.Component {
         <Post
         key={post._id}
          name = {post.user.userName}
+         subject = {post.subject}
          email = {post.user.email}
          location = {post.location}
          content = {post.content}
         >
         </Post> 
         ))}
-      </div>
+      </div> 
     );
   }
 }
