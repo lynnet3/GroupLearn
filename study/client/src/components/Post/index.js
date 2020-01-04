@@ -10,6 +10,7 @@ const Post = props => (
               alt="Avatar"
             />
     <p>{props.name}</p>
+    <p>{props.subject}</p>
     <p>{props.email}</p>
     <p>{props.location}</p>
           </div>

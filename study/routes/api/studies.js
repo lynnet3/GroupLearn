@@ -6,11 +6,7 @@ router.route("/")
   .get(studyController.findAllPosts)
   .post(studyController.create);
 
-// Matches with "/api/studies/:id"
-router
-  .route("/:id")
-  .get(studyController.findById)
-  .put(studyController.update)
-  .delete(studyController.remove);
+  router.route("/subjects")
+  .post(studyController.findSubjectPosts)
 
 module.exports = router;
