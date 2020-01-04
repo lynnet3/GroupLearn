@@ -1,6 +1,6 @@
 import React from "react";
-import bioInfo from "./bioInfo";
-import BioBTN from "./BioBTN";
+import bioInfo from "../BioINFO/bioInfo";
+import BioBTN from "../BioBTN/BioBTN";
 
 class bio extends React.Component {
   render() {
