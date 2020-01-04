@@ -7,9 +7,14 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
-    />
+      content="Web site created using create-react-app"/>
     <link rel="apple-touch-icon" href="logo192.png" />
+<<<<<<< HEAD
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="crossorigin="anonymous"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+=======
     <link rel ="stylesheet" type ="text/css" href ="assets/styles/style.css">
     <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
     <script src="jquery-3.4.1.min.js"></script>
@@ -25,10 +30,153 @@
   <link rel="stylesheet" href="login.html">
 
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+>>>>>>> 2dd090877789712bb745cde47abb3516c5bdcf90
 
     <title>React App</title>
+
   </head>
+
+<style>
+  html{
+    background-color: gray;
+  }
+ #header-content{
+    background-image: linear-gradient(to right, #c770d8, #6066ff, #7fefc8);
+    border-radius: 10px;
+    border: 12px ridge #e2e2e2;
+    box-shadow: 5px 5px 10px #272B30;
+  }
+
+  #main-container{
+    padding: 15px;
+    text-align:center;
+  }
+
+  .user{
+    border: 5px ridge gray;
+  display:inline-block;
+  color: blue;
+
+  }
+
+  .sidenav {
+  height: 100%;
+  width: 175px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: lightgray;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #2196F3;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #064579;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.search{
+  padding-top: 10px;
+}
+
+</style>
   <body>
+<<<<<<< HEAD
+
+      <div id="header-content">
+          <header>
+            <h1>Study Group Finder</h1>
+          </header>
+      </div>
+
+      <div class="sidenav">
+          <div class="search">
+              <input class="prompt" type="text" placeholder="Search">
+              <div class="results"></div>
+            </div>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#clients">Clients</a>
+          <a href="#contact">Contact</a>
+
+          <div class="user">
+              <span class="close"></span>
+              <form action="/api" method="POST">
+                  <div class="form-row">
+                      <div class="form-group">
+                          <label class="form-head" for="username">Username:</label>
+                          <input type="text" id="modalUsername" name="username" class="form-control" placeholder="Username..."
+                              minlength="3" maxlength="15" required>
+                      </div>
+                      <div class="form-group">
+                          <label class="form-head" for="password">Password:</label>
+                          <input type="password" id="modalPassword" name="password" class="form-control" minlength="7"
+                              maxlength="10" placeholder="Password..." required>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="form-head" for="email">E-mail:</label>
+                      <input type="email" id="email" name="email" class="form-control" placeholder="E-mail..." required>
+                  </div>
+                  <button id="modal-submit" type="submit" class="btn btn-dark">Submit</button>
+              </form>
+            </div>
+         </div>
+  
+  
+
+      
+      <div id="main-container" class="container">
+          <section class="main-section">
+
+          <div class= "Subject">
+            <button type= "submit" name = "learn" value="myimage">
+              <img src="/study/client/public/secondarypages/images/imageServlet.jpg" alt = "math">
+            </button>
+          </div>
+
+          <div class= "Subject">
+              <button type= "submit" name = "learn" value="myimage">
+                <img src="/study/client/public/secondarypages/images/th.jpg" alt = "science">
+              </button>
+            </div>
+      
+            <div class= "Subject">
+                <button type= "submit" name = "learn" value="myimage">
+                  <img src="/study/client/public/secondarypages/images/unnamed.png" alt = "English">
+                </button>
+              </div>
+              
+              <div class= "Subject">
+                  <button type= "submit" name = "learn" value="myimage">
+                    <img src="/study/client/public/secondarypages/images/Big-History-BD_02.png" alt = "History">
+                  </button>
+                </div>
+          </section>
+      
+        </div>
+
+        
+=======
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
     <div id="root">
@@ -44,5 +192,6 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <script src="assets/javascript/app.js"></script>
+>>>>>>> 2dd090877789712bb745cde47abb3516c5bdcf90
   </body>
 </html>

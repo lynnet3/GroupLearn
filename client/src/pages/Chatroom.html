@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Math</title>
+</head>
+
+<style>
+    html{
+      background-color: gray;
+    }
+   #header-content{
+      background-image: linear-gradient(to right, #c770d8, #6066ff, #7fefc8);
+      border-radius: 10px;
+      border: 12px ridge #e2e2e2;
+      box-shadow: 5px 5px 10px #272B30;
+      text-align: center;
+      position: relative;
+    }
+    #main-container{
+      padding: 15px;
+      text-align:center;
+    }
+
+  .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:black;
+  color: white;
+  text-align: center;
+}
+
+
+/* message board*/
+.MessageBoard {
+  border: 2px solid black;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  height: fit-content;
+}
+.jumbotron{
+    border: 2px solid grey;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    position: relative;
+}
+
+.message{
+    width: 90%;
+}
+
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;
+}
+
+
+
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+/* post message button */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 20px;
+  right: 900px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 900px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+  </style>
+<body>
+    <div class="navbar" data-component="Navbar">
+        <a href="#home">Home</a>
+        <a href="#news">Profile</a>
+        <div class="dropdown">
+          <button class="dropbtn">Subjects
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">English</a>
+            <a href="#">History</a>
+            <a href="#">Science</a>
+          </div>
+        </div>
+        <a href="#Settings">Settings</a>
+      </div>
+
+
+    <div id="header-content" data-component="Header">
+        <header>
+          <h1>Math Group</h1>
+        </header>
+    </div>
+
+
+    <div class = "jumbotron" data-component="Jumbotron">
+        <h3>Math Board</h3>
+        <div class ="MessageBoard" data-component="MessageBoard">   
+            <div class="container">
+                <div id ="AvatarInfo">
+                <img src="#" alt="Avatar" style="width:100%;">
+                  <p>Name/Title</p>
+                  <p>Email</p>
+                  <p>Location</p>
+                </div>
+                <p>Hello. How are you today?</p>
+                <span class="time-right">11:00</span>
+                <button class = "Reply">Reply</button>
+              </div>
+              
+              <div class="container darker">
+                <div id ="AvatarInfo">
+                    <img src="#" alt="Avatar" style="width:100%;">
+                    <p>Name</p>
+                    <p>Email</p>
+                    <p>Location</p>
+                </div>
+                <p>Hey! I'm fine. Thanks for asking!</p>
+                <span class="time-right">11:01</span>
+                <button class = "Reply">Reply</button>
+              </div>
+              
+              <div class="container">
+                <div id ="AvatarInfo">
+                    <img src="#" alt="Avatar" style="width:100%;">
+                    <p>Name</p>
+                    <p>Email</p>
+                    <p>Location</p>
+                </div>
+                <p>Sweet! So, what do you wanna do today?</p>
+                <span class="time-right">11:02</span>
+                <button class = "Reply">Reply</button>
+              </div>
+              
+              <div class="container darker">
+                <div id ="AvatarInfo">
+                    <img src="#" alt="Avatar" style="width:100%;">
+                    <p>Name</p>
+                    <p>Email</p>
+                    <p>Location</p>
+               </div>
+                <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+                <span class="time-right">11:05</span>
+                <button class = "Reply">Reply</button>
+              </div>
+              
+        </div>
+    </div>
+  
+    
+
+    <button class="open-button" onclick="openForm()">POST MESSAGE</button>
+
+    <div class="chat-popup" id="myForm" data-component="ChatPopup">
+      <form action="/action_page.php" class="form-container">
+        <h1>Post Message</h1>
+        <input class ="Titlefinder" placeholder="Title">
+        
+        <label for="msg"><b>Message</b></label>
+        <textarea placeholder="Type message.." name="msg" required></textarea>
+    
+        <button type="submit" class="btn" data-component="Submit">Send</button>
+        <button type="button" class="btn cancel" onclick="closeForm()" data-component="Cancel">Close</button>
+      </form>
+    </div>
+    
+<script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
+
+
+
+
+       <div class="footer">
+        <input class ="message"> <button id = "addmessage">Submit</button>
+      </div>
+
+    
+</body>
+</html>

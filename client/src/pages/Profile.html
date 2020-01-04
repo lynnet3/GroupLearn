@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profile</title>
+</head>
+
+<style>
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* profile main picture */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+.contact {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+.AccInfo{
+ border: 2px solid grey;
+ background-color: #f1f1f1;
+ border-radius: 5px;
+
+}
+.bioinfo{
+  border:2px solid black;
+  padding : 10px;
+}
+.biosub{
+  display: inline-block;
+}
+
+</style>
+
+
+<body>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#news">Profile</a>
+        <div class="dropdown">
+          <button class="dropbtn">Subjects
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">English</a>
+            <a href="#">History</a>
+            <a href="#">Science</a>
+          </div>
+        </div>
+        <a href="#Settings">Settings</a>
+      </div>
+
+      <div class="card" data-component="ProfileCard">
+        <img src="/w3images/team2.jpg" alt="John" style="width:100%">
+        <h1>John Doe</h1>
+        <p class="title">CEO & Founder, Example</p>
+        <p>Harvard University</p>
+        <div style="margin: 24px 0;">
+          <a href="#"><i class="fa fa-dribbble"></i></a> 
+          <a href="#"><i class="fa fa-twitter"></i></a>  
+          <a href="#"><i class="fa fa-linkedin"></i></a>  
+          <a href="#"><i class="fa fa-facebook"></i></a> 
+        </div>
+      </div>
+
+      <div class ="AccInfo" data-component="AccInfo">
+        <h3> Account info</h3>
+        <br></br>
+        <form>
+          UserName:
+          <input type="text" name= "username" placeholder="Username"><br>
+          First name:
+          <input type="text" name="firstname" placeholder="Firstname"><br>
+          Last name:
+          <input type="text" name="lastname" placeholder="lastname"><br>
+          Email:
+          <input type="text" name="Email" placeholder="Email"><br>
+          Title:
+          <input type="text" name="title" placeholder="Title"><br>
+          Image:
+          <input type="text" name="image" placeholder="Image"><br>
+          <input type="submit">
+        </form>
+      </div>
+
+      <aside class ="bio" data-component="bio">
+      <form>
+        <h3>Bio</h3>
+        <div class="bioinfo" data-component="bioInfo">
+          Bio information area asdfghjklpoiuygfdxcvbnjuytrdsxcvbnjuytgfcvbnjhgfv
+          sdsddsdsdsdfghjkuygfcvbnmkuytfcvbn
+        </div>
+        <textarea cols="50" rows="5">
+          This is where the user can enter text. If there's too much text, the textbox can develop scrollbars to accommodate the extra text...
+          </textarea>
+        <button class="bioSub" data-component="BioBTN">Submit</button>          
+      </form>
+      </aside>
+
+<footer>
+  <P><button class="contact" data-component="contactBTN">Contact</button></P>
+</footer>
+
+
+
+
+
+
+
+</body>
+</html>

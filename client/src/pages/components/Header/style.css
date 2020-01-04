@@ -1,5 +1,5 @@
 #header-content{
-    background-image:black;
+    background-image: linear-gradient(to right,blue, lightblue,teal);
     border-radius: 10px;
     border: 12px ridge #e2e2e2;
     box-shadow: 5px 5px 10px #272B30;
