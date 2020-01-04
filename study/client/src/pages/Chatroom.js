@@ -29,9 +29,11 @@ subject: this.props.match.params.subject
       .catch(err => console.log(err));
       }
     
-      getAllPosts = () => {
+      getSubjectPosts = () => {
         console.log("checkForPosts")
-        API.getAllPosts()
+        API.getSubjectPosts({
+          subject: this.state.subject
+        })
       .then(res => {
           console.log(res)
         this.setState({
@@ -43,7 +45,7 @@ subject: this.props.match.params.subject
     
       componentWillMount(){
         this.checkForUser()
-        this.getAllPosts()
+        this.getSubjectPosts()
       }
 
     render(){
@@ -62,6 +64,7 @@ subject: this.props.match.params.subject
             </div>
             <div>
             <PostGroup
+          subject = {this.state.subject}
           returnedName = {this.state.returnedName}
           returnedEmail = {this.state.returnedEmail}
           ></PostGroup>

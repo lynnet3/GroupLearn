@@ -27,6 +27,15 @@ else {
     .then(dbModel => res.json(dbModel))
     .catch(err => res.status(422).json(err));
   },
+  findSubjectPosts: function(req, res) {
+    console.log("findPosts")
+    console.log(req.body.params.q.subject)
+    db.Study
+    .find({subject: req.body.params.q.subject})
+    .sort({ date: -1 })
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
+  },
   remove: function(req, res) {
     db.Study
       .findById({ _id: req.params.id })
