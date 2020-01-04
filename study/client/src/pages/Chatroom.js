@@ -51,36 +51,21 @@ data: { data: [] }
             <Nav/>
             <Header/>
             <Jumbotron>
-<<<<<<< HEAD
-            <MessageBoard>
-            </MessageBoard>
-            </Jumbotron>
-            <ChatPopup>
-=======
             <MessageBoard
             data = {this.state.data}>
             >
             </MessageBoard>
             </Jumbotron>
             <ChatPopUp>
->>>>>>> 2f0a9d7e88274459b1ae7929cc0329b9ab904a20
             <Submit>
             </Submit>
            <Cancel>
          </Cancel>
-<<<<<<< HEAD
-            </ChatPopup>
-
-            </div>
-            </Container>
-        );
-=======
             </ChatPopUp>
 
             </div>
             </Container>
         )
->>>>>>> 2f0a9d7e88274459b1ae7929cc0329b9ab904a20
     }
 }
 export default Chatroom;

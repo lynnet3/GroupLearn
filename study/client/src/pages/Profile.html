@@ -91,7 +91,7 @@
   font-size: 18px;
 }
 
-button {
+.contact {
   border: none;
   outline: 0;
   display: inline-block;
@@ -113,11 +113,18 @@ a {
 button:hover, a:hover {
   opacity: 0.7;
 }
-.Info{
+.AccInfo{
  border: 2px solid grey;
  background-color: #f1f1f1;
  border-radius: 5px;
- display: inline-flex;
+
+}
+.bioinfo{
+  border:2px solid black;
+  padding : 10px;
+}
+.biodub{
+  display: inline-block;
 }
 
 </style>
@@ -153,37 +160,42 @@ button:hover, a:hover {
         </div>
       </div>
 
-      <div class ="Info">
+      <div class ="AccInfo" data-component="AccInfo">
         <h3> Account info</h3>
         <br></br>
         <form>
-          UserName<br> 
-          <input type="text" name= "username" value="Username"></br>
-          First name<br>
-          <input type="text" name="firstname" value="Firstname"><br>
-          Last name<br>
-          <input type="text" name="lastname" value="lastname"></br>
-          Email<br>
-          <input type="text" name="Email" value="Email"></br>
-          Title<br>
-          <input type="text" name="title" value="Title"></br>
+          UserName:
+          <input type="text" name= "username" placeholder="Username"><br>
+          First name:
+          <input type="text" name="firstname" placeholder="Firstname"><br>
+          Last name:
+          <input type="text" name="lastname" placeholder="lastname"><br>
+          Email:
+          <input type="text" name="Email" placeholder="Email"><br>
+          Title:
+          <input type="text" name="title" placeholder="Title"><br>
+          Image:
+          <input type="text" name="image" placeholder="Image"><br>
           <input type="submit">
         </form>
       </div>
 
-      <aside class ="bio">
+      <aside class ="bio" data-component="bio">
       <form>
         <h3>Bio</h3>
+        <div class="bioinfo" data-component="bioInfo">
+          Bio information area asdfghjklpoiuygfdxcvbnjuytrdsxcvbnjuytgfcvbnjhgfv
+          sdsddsdsdsdfghjkuygfcvbnmkuytfcvbn
+        </div>
         <textarea cols="50" rows="5">
           This is where the user can enter text. If there's too much text, the textbox can develop scrollbars to accommodate the extra text...
           </textarea>
-        <button class="bioSub">Submit</button>          
+        <button class="bioSub" data-component="BioBTN">Submit</button>          
       </form>
-
       </aside>
 
 <footer>
-  <P><button>Contact</button></P>
+  <P><button class="contact" data-component="contactBTN">Contact</button></P>
 </footer>
 
 
