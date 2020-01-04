@@ -70,6 +70,10 @@ subject: this.props.match.params.subject
           ></PostGroup>
           </div>
             </Container>
+            <ChatPopUp>
+              <Submit></Submit>
+              <Cancel></Cancel>
+            </ChatPopUp>
         )
     }
 }
