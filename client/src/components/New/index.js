@@ -24,7 +24,10 @@ if (form.userName && form.password && form.email) { //if all 3 areas are filled 
       password: form.password,
       email: form.email,
     })
-      .then(res => console.log(res.data))
+      .then(res => {
+        console.log(res.data)
+      this.props.history.push("/")
+      })
       .catch(err => console.log(err));
     }
 };

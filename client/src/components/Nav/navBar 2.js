@@ -17,20 +17,28 @@ class NavBar extends React.Component {
           <div className="ui compact menu">
             <div className="ui simple dropdown item" id="subjects-dd">
               Subjects
-              <i className="book icon" />
+              <i className="book icon"/>
               <div className="menu">
+              <a className="active item" href="/subjects/Math">
                 <div className="item" id="math-dd">
                   Math
                 </div>
+                </a>
+                <a className="active item" href="/subjects/Science">
                 <div className="item" id="science-dd">
                   Science
                 </div>
+                </a>
+                <a className="active item" href="/subjects/Art">
                 <div className="item" id="art-dd">
                   Art
                 </div>
+                </a>
+                <a className="active item" href="/subjects/History">
                 <div className="item" id="history-dd">
                   History
                 </div>
+                </a>
               </div>
             </div>
           </div>
