@@ -10,7 +10,7 @@
     -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
     -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
     animation-name: example;
-    animation-duration: 4s;
+    animation-duration: 10s;
   }
   
   /* Safari 4.0 - 8.0 */
@@ -24,10 +24,10 @@
   
   /* Standard syntax */
   @keyframes example {
-    0%   {background-color:red; left:0px; top:0px;}
-    25%  {background-color:white; left:200px; top:0px;}
-    50%  {background-color:blue; left:200px; top:200px;}
-    75%  {background-color:white; left:0px; top:200px;}
+    0%   {left:-300px; top:-100px;}
+    25%  {left:300px; top:-100px;}
+    50%  {left:-300px; top:100px;}
+    75%  {left:300px; top:100px;}
     100% {background-image:url("../images/space.jpeg"); left:0px; top:0px;}
   }
 
@@ -221,7 +221,8 @@ h2{
 }
 
 #login-nav, #signup-nav{
-    color:white;
+    background-image:url("../images/space.jpeg");
+    color: white;
 }
 
 #cat{
@@ -239,7 +240,7 @@ h2{
 
 #root{
     text-align: center;
-    color:beige;
+    color:black; /*changes color of ALL text, do not use root*/
 }
 
 #subjects-dd{
