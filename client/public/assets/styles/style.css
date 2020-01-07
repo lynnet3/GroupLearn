@@ -1,13 +1,16 @@
 .login-greet {
     width: 100px;
     height: 100px;
-    background-color: black;
+    text-align: center;
+    background-image:url("../images/space.jpeg");
     color:white;
     position: relative;
+    margin-top:100px;
+    margin-left:650px;
     -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
     -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
     animation-name: example;
-    animation-duration: 4s;
+    animation-duration: 10s;
   }
   
   /* Safari 4.0 - 8.0 */
@@ -16,16 +19,16 @@
     25%  {background-color:white; left:200px; top:0px;}
     50%  {background-color:black; left:200px; top:200px;}
     75%  {background-color:white; left:0px; top:200px;}
-    100% {background-color:black; left:0px; top:0px; color: white;}
+    100% {background-image:url("../images/space.jpeg"); left:0px; top:0px; color: white;}
   }
   
   /* Standard syntax */
   @keyframes example {
-    0%   {background-color:red; left:0px; top:0px;}
-    25%  {background-color:white; left:200px; top:0px;}
-    50%  {background-color:blue; left:200px; top:200px;}
-    75%  {background-color:white; left:0px; top:200px;}
-    100% {background-color:black; left:0px; top:0px;}
+    0%   {left:-300px; top:-100px;}
+    25%  {left:300px; top:-100px;}
+    50%  {left:-300px; top:100px;}
+    75%  {left:300px; top:100px;}
+    100% {background-image:url("../images/space.jpeg"); left:0px; top:0px;}
   }
 
 /* Original CSS */
@@ -35,7 +38,7 @@ body {
 .container{
     background-color:#000;
     padding-bottom:350px;
-    background-image: url("../images/Bookshelf2.jpg"); /* This effects every single page */
+    background-image: url("../images/Bookshelf2.jpg");
 }
 
 label {
@@ -59,6 +62,7 @@ label {
 .subject-container{
     padding-top:100px;
     margin-top:10px;
+    width:100%;
 }
 a:hover{
     background-color:gold;
@@ -82,9 +86,7 @@ science-btn, math-btn, art-btn, history-btn{
     padding:10px;
     width: 100px;
     height: 220px;
-    background: red;
-    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
-    transition: width 2s;
+    background: tan;
 }
 
 #math-btn, #art-btn, #science-btn, #history-btn{
@@ -99,7 +101,7 @@ science-btn, math-btn, art-btn, history-btn{
     /* transition: width 2s;
   } */ 
   
-  #subject-btns:hover {
+  #subject-btns{
     width: 100%;
   }
 
@@ -111,11 +113,8 @@ science-btn, math-btn, art-btn, history-btn{
     color:lightblue;
     text-align: center;
 }
-.subject-heading:hover{
+.subject-heading{
     color:#fff;
-}
-.subject-subheading:hover{
-    color:lightblue;
 }
 .subject-subheading{
     color:#fff;
@@ -139,7 +138,7 @@ science-btn, math-btn, art-btn, history-btn{
 
 #science-dd{
     color:green;
-    background-color:orange;
+    background-color:#000;
 }
 
 #history-dd{
@@ -157,6 +156,10 @@ science-btn, math-btn, art-btn, history-btn{
 
 #logo-pic{
     width:10%;
+}
+
+#greeting{
+    font-family: 'Lora', serif;
 }
 
 #logo-pic:hover{
@@ -190,19 +193,23 @@ science-btn, math-btn, art-btn, history-btn{
     background-color:gold;
 }
 
+h2{
+    font-family: 'Lora', serif;
+}
+
 .login-greet{
     color:white;
-    font-family: 'Lora', serif;
-    text-align:left;
+    text-align:center;
+    border: 2px outset tan;
     width: 100px;
     height: 100px;
-    background-color: black;
+    background-image:url("../images/space.jpeg");
     position: relative;
+    margin-left:650px;
     -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
     -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
     animation-name: example;
     animation-duration: 4s;
-    
 }
 
 #title{
@@ -214,7 +221,8 @@ science-btn, math-btn, art-btn, history-btn{
 }
 
 #login-nav, #signup-nav{
-    color:white;
+    background-image:url("../images/space.jpeg");
+    color: white;
 }
 
 #cat{
@@ -232,7 +240,7 @@ science-btn, math-btn, art-btn, history-btn{
 
 #root{
     text-align: center;
-    color:black;
+    color:black; /*changes color of ALL text, do not use root*/
 }
 
 #subjects-dd{

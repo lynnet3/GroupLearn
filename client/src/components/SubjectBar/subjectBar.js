@@ -20,6 +20,7 @@ class SubjectBar extends React.Component {
             </div>
           </div>
           </a>
+          <a href="/subjects/Art">
           <div
             className="ui blue huge animated button"
             tabIndex={0}
@@ -32,6 +33,8 @@ class SubjectBar extends React.Component {
               <div className="subject-text">ART</div>
             </div>
           </div>
+          </a>
+          <a href="/subjects/Science">
           <div
             className="ui green huge animated button"
             tabIndex={0}
@@ -44,6 +47,8 @@ class SubjectBar extends React.Component {
               <div className="subject-text">SCIENCE</div>
             </div>
           </div>
+          </a>
+          <a href="/subjects/History">
           <div
             className="ui orange huge animated button"
             tabIndex={0}
@@ -56,6 +61,7 @@ class SubjectBar extends React.Component {
               <div className="subject-text">HISTORY</div>
             </div>
           </div>
+          </a>
           <h5 className="subject-subheading">
             Which subjects are you interested in studying?
           </h5>
