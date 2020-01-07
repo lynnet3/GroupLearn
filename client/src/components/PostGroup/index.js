@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Col, Row} from "../Grid";
 import { Input, TextArea, FormBtn } from "../Form";
 import API from "../../utils/API";
+import "./index.css";
 
 class PostGroup extends Component { //main is a test page to test user creation (Working)
 
@@ -49,22 +50,31 @@ return (
     <Row>
         <Col size="md-3">
 <form>
+  <h2
+  className="infoTitle">
     Make a request to start a studygroup
-        <Input
-        value={this.state.location}
-        onChange={this.handleInputChange}
-        name="location"
-        placeholder="enter location here"
-        />
+  </h2>
          <TextArea
+         className="Textbox"
         value={this.state.content}
         onChange={this.handleInputChange}
         name="content"
         placeholder="enter content here"
         />
-        <FormBtn
+        <div
+        className="buddies">
+        <Input
+        className="location"
+        value={this.state.location}
+        onChange={this.handleInputChange}
+        name="location"
+        placeholder="enter location here"
+        />
+        <button
+        className="button"
         onClick={this.handleSubmit} //when this button is clicked, it submits the form
-        >Submit</FormBtn>
+        >Submit</button>
+        </div>
 </form>
         </Col>
     </Row>
