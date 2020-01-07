@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Col, Row} from "../Grid";
 import { Input, TextArea, FormBtn } from "../Form";
 import API from "../../utils/API";
+import "./index.css";
 
 class PostGroup extends Component { //main is a test page to test user creation (Working)
 
@@ -57,6 +58,7 @@ return (
         placeholder="enter location here"
         />
          <TextArea
+        className="Textbox"
         value={this.state.content}
         onChange={this.handleInputChange}
         name="content"
