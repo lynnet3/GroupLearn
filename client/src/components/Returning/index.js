@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./style.css"
 class Returning extends Component { //main is a test page to test user creation (Working)
 
     state = { //All the variables that will change

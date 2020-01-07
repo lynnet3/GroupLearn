@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import {Col, Row, Container} from "../Grid";
 import {Input, TextArea, FormBtn} from "../Form"
-import "./style.css"
 class Returning extends Component{
 state = {
     username:"",

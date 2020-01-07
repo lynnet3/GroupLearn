@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
+import "./style.css"
 
 class New extends Component { //main is a test page to test user creation (Working)
 
