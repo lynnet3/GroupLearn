@@ -71,7 +71,7 @@ return (
         placeholder="enter location here"
         />
         <button
-        className="button"
+        className="subButton"
         onClick={this.handleSubmit} //when this button is clicked, it submits the form
         >Submit</button>
         </div>
