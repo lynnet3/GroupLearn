@@ -1,0 +1,9 @@
+.new {
+height: 250px;
+width: 50%;
+background-color: lightgrey;
+}
+.fields{
+    height: auto;
+    width: auto;
+}
