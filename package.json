@@ -16,7 +16,7 @@
     "styletron-react": "^5.2.6"
   },
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:prod",
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon server.js\" \"npm run client\"",
     "client": "cd client && npm run start",
@@ -26,7 +26,7 @@
     "heroku-postbuild": "npm run build"
   },
   "devDependencies": {
-    "concurrently": "^4.1.0",
+    "concurrently": "^4.1.2",
     "nodemon": "^1.18.7"
   },
   "repository": {
