@@ -43,16 +43,15 @@ subject: this.props.match.params.subject
       .catch(err => console.log(err));
       }
     
-      componentWillMount(){
+      componentDidMount(){
         this.checkForUser()
         this.getSubjectPosts()
       }
-
     render(){
         return (
-            <Container fluid>
+            <div className="bigCon">
             <div className= "container">
-            <Nav/>
+            <Nav></Nav>
             <Header
             subject = {this.state.subject}>
             </Header>
@@ -67,9 +66,10 @@ subject: this.props.match.params.subject
           subject = {this.state.subject}
           returnedName = {this.state.returnedName}
           returnedEmail = {this.state.returnedEmail}
+          submitComment={this.submitComment}
           ></PostGroup>
           </div>
-            </Container>
+            </div>
         )
     }
 }
