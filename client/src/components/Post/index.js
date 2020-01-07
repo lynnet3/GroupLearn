@@ -16,7 +16,18 @@ const Post = props => (
           </div>
     <p>{props.content}</p>
     <span className="time-right">{props.time}</span>
-    <button className="Reply">Reply</button>
+    <form>
+    <input className="ReplyText"
+    name={props.asdf}
+    type="text"
+    onChange={props.handleInputChange}
+    value={props.reply}
+    ></input>
+    <button className="Reply"
+    type="submit"
+    onClick={ e => props.submitReply(e, props.asdf)}
+    >Reply</button>
+    </form>
         </div>
       )
 
