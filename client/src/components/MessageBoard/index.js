@@ -7,7 +7,7 @@ class MessageBoard extends React.Component {
     console.log("hiyah friend")
     if (this.props.data.data) {
     console.log(this.props.data.data)
-  }
+  
     return (
       <div className="MessageBoard">
         {this.props.data.data.map(post => (
@@ -23,6 +23,7 @@ class MessageBoard extends React.Component {
         ))}
       </div> 
     );
+        }
   }
 }
 export default MessageBoard;
