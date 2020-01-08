@@ -9,11 +9,13 @@ We decided to make this site because we saw a need for students that would want 
 
 ## The tools we used 
 
-*React
-*Heroku
+*ReactJS
 *NodeJS
+*Nodemon
 *Semantic UI
 *Bootstrap
 *Mongoose
 *Express
+*Express-session with mongostore
 *Google Fonts
+*Concurrently
