@@ -10,23 +10,6 @@
     animation-duration: 4s;
   }
   
-  /* Safari 4.0 - 8.0 */
-  @-webkit-keyframes example {
-    0%   {background-color:red; left:0px; top:0px;}
-    25%  {background-color:white; left:200px; top:0px;}
-    50%  {background-color:black; left:200px; top:200px;}
-    75%  {background-color:white; left:0px; top:200px;}
-    100% {background-color:black; left:0px; top:0px; color: white;}
-  }
-  
-  /* Standard syntax */
-  @keyframes example {
-    0%   {background-color:red; left:0px; top:0px;}
-    25%  {background-color:white; left:200px; top:0px;}
-    50%  {background-color:blue; left:200px; top:200px;}
-    75%  {background-color:white; left:0px; top:200px;}
-    100% {background-color:black; left:0px; top:0px;}
-  }
 
 /* Original CSS */
 body {
@@ -61,9 +44,6 @@ label {
     padding-top:100px;
     margin-top:10px;
 }
-a:hover{
-    background-color:gold;
-}
 
 .ui form{
     text-align:center;
@@ -88,17 +68,6 @@ science-btn, math-btn, art-btn, history-btn{
     transition: width 2s;
 }
 
-#math-btn, #art-btn, #science-btn, #history-btn{
-
-}
-
-/* div {
-    width: 100px;
-    height: 100px;
-    background: red;
-    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
-    /* transition: width 2s;
-  } */ 
   
   #subject-btns:hover {
     width: 100%;
@@ -170,12 +139,6 @@ science-btn, math-btn, art-btn, history-btn{
 }
 
 
-#nav{
-    color:#000;
-    background-color: #000;
-    background-image:url("../images/space.jpeg");
-    width:100%;
-}
 
 #place-nav{
     background-color: #fff;

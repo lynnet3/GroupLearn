@@ -9,7 +9,8 @@ const studieschema = new Schema({
   user: {
   userName: { type: String, required: true },
   email: { type: String, required: true },
-  }
+  },
+  replies: [{userName: {type: String, required: true}, replyContent: {type: String, required: true}}]
 });
 
 const Study = mongoose.model("Study", studieschema);

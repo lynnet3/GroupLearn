@@ -3,10 +3,7 @@ const db = require("../models");
 // Defining methods for the studyController
 module.exports = {
   findCookie: function(req, res) {
-console.log("It runs")
 if(req.session.userName) {
-  console.log("cookie"),
-  console.log(req.session.userName),
     res.json(req.session)
 }
 else {
@@ -36,12 +33,25 @@ else {
     .then(dbModel => res.json(dbModel))
     .catch(err => res.status(422).json(err));
   },
-  remove: function(req, res) {
+  createReply: function(req, res) {
+    console.log(req.body)
     db.Study
-      .findById({ _id: req.params.id })
-      .then(dbModel => dbModel.remove())
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+    .findOneAndUpdate({_id: req.body.id}, 
+    {$push: {replies: {userName: req.body.userName, replyContent: req.body.replyContent}}},
+    {
+      returnNewDocument: true
+  })
+    .sort({ date: -1 })
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
+  },
+  findYourReplies: function(req, res) {
+    console.log(req.body.userName)
+    db.Study
+    .find({user: {userName: req.body.userName, email: req.body.email}})
+    .sort({ date: -1 })
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
   },
    findUser: function(req, res) {
     console.log("Session: ___l")
