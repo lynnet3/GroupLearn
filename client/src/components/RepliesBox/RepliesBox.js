@@ -34,7 +34,7 @@ let userName = this.props.userName
   render() {
     if (this.props.data.data) {
     return (
-      <div className="MessageBoard">
+      <div>
         {this.props.data.data.map(post => (
         <InboxPost
         key={post._id}

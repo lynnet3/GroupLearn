@@ -3,7 +3,8 @@ import "./style.css"
 
 
 const Post = props => (
-<div className="post-container">
+    
+<div className="post-container2">
           <div id="AvatarInfo">
             <img
               src="#"
@@ -16,7 +17,8 @@ const Post = props => (
           </div>
     <p>{props.content}</p>
     <div className="repliesBox">
-        
+        {props.replies[0].replyContent}
+    
     </div>
     <span className="time-right">{props.time}</span>
         </div>
