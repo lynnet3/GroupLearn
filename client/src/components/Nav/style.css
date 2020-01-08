@@ -27,9 +27,6 @@ label {
     padding-top:100px;
     margin-top:10px;
 }
-a:hover{
-    background-color:gold;
-}
 
 .ui form{
     text-align:center;
@@ -56,10 +53,10 @@ science-btn, math-btn, art-btn, history-btn{
     text-align: center;
 }
 .subject-heading:hover{
-    color:lightblue;
+    cursor: default;
 }
 .subject-subheading:hover{
-    color:#fff;
+    cursor: default;
 }
 .subject-subheading{
     color:#fff;
@@ -83,7 +80,7 @@ science-btn, math-btn, art-btn, history-btn{
 
 #science-dd{
     color:green;
-    background-color:orange;
+    background-color:#000;
 }
 
 #history-dd{
@@ -115,8 +112,8 @@ science-btn, math-btn, art-btn, history-btn{
 
 #nav{
     color:#000;
-    background-color: #000;
-    background-image:url("../images/space.jpeg");
+    background-image: url("/assets/images/space.jpeg");
+    width: 100%;
 }
 
 #place-nav{
@@ -134,9 +131,10 @@ science-btn, math-btn, art-btn, history-btn{
 }
 
 .login-greet{
-    color:gold;
+    color:White;
     font-family: 'Lora', serif;
-    text-align:left;
+    text-align:center;
+    padding: 10px;
     
 }
 #title{
@@ -162,11 +160,6 @@ science-btn, math-btn, art-btn, history-btn{
 #main-quest{
     background-color: black;
     height:100%;
-}
-
-#root{
-    text-align: center;
-    color:beige;
 }
 
 #subjects-dd{

@@ -1,9 +1,10 @@
 import React from "react";
+import "./style.css"
 
 class NavBar extends React.Component {
   render() {
     return (
-      <div className="ui secondary  menu" id="nav">
+      <div className="ui secondary menu" id="nav">
         <a className="active item" href="/">
           <i className="home icon" id="home-nav" />
         </a>
