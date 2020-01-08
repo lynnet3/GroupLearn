@@ -9,4 +9,10 @@ router.route("/")
   router.route("/subjects")
   .post(studyController.findSubjectPosts)
 
+  router.route("/reply")
+  .post(studyController.createReply)
+
+  router.route("/inbox")
+  .post(studyController.findYourReplies)
+
 module.exports = router;

@@ -1,8 +1,7 @@
 import React from "react";
-import Post from "../Post";
+import InboxPost from "../InboxPost/InboxPost";
 import API from "../../utils/API";
-import "./style.css";
-class MessageBoard extends React.Component {
+class RepliesBox extends React.Component {
 
   state = {
     reply: ""
@@ -33,13 +32,12 @@ let userName = this.props.userName
 
 
   render() {
-    if (this.props.data.data.length > 0) {
+    if (this.props.data.data) {
     return (
       <div className="MessageBoard">
         {this.props.data.data.map(post => (
-        <Post
+        <InboxPost
         key={post._id}
-        asdf={post._id}
          name = {post.user.userName}
          subject = {post.subject}
          email = {post.user.email}
@@ -48,8 +46,9 @@ let userName = this.props.userName
          submitReply = {this.submitReply}
          handleInputChange = {this.handleInputChange}
          reply = {this.state.reply[post._id]}
+         replies = {post.replies}
         >
-        </Post> 
+        </InboxPost> 
         ))}
       </div> 
     );
@@ -64,4 +63,4 @@ let userName = this.props.userName
   }
   }
 }
-export default MessageBoard;
+export default RepliesBox;

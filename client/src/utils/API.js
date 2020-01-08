@@ -8,6 +8,13 @@ export default {
   saveGroup: function(postData) {
     return axios.post("/api/studies", postData);
   },
+  submitReply: function(replyData) {
+    return axios.post("/api/studies/reply", replyData);
+  },
+  getReplies: function(inboxData) {
+    console.log(inboxData)
+    return axios.post("/api/studies/inbox", inboxData);
+  },
   //searches for a user matching the given info
   getUser: function(userData) {
     console.log(userData)

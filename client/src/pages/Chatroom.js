@@ -1,11 +1,6 @@
 import React, {Component} from "react";
-import { Container } from "../components/Grid";
 import Nav from "../components/Nav/navBar 2";
-import Submit from "../components/Submit";
-import Cancel from "../components/Cancel";
 import MessageBoard from "../components/MessageBoard";
-import ChatPopUp from "../components/ChatPopUp";
-import Jumbotron from "../components/Jumbotron";
 import Header from "../components/Header";
 import PostGroup from "../components/PostGroup";
 import API from "../utils/API";
@@ -57,7 +52,8 @@ subject: this.props.match.params.subject
             </Header>
             
             <MessageBoard
-            data = {this.state.data}>
+            data = {this.state.data}
+            userName = {this.state.returnedName}>
             </MessageBoard>
             
             </div>
