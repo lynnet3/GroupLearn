@@ -8,6 +8,10 @@ class NavBar extends React.Component {
         <a className="active item" href="/">
           <i className="home icon" id="home-nav" />
         </a>
+        <a className="item" id="subjects-dd" href="/inbox">
+            Friends
+            <i className="" id="friend-nav"></i>
+          </a>
         <div className="right menu">
           <div className="item">
             <div className="ui fluid icon input">

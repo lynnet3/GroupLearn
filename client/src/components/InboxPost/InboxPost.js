@@ -17,12 +17,13 @@ const Post = props => (
           </div>
     <p>{props.content}</p>
     <div className="repliesBox">
-        {props.replies[0].replyContent}
+        
+        {props.replies[0].replyContent} 
     
-    </div>
+    </div> 
     <span className="time-right">{props.time}</span>
         </div>
       )
 
-
+//future dev: figure out how to loop over replies.
 export default Post;

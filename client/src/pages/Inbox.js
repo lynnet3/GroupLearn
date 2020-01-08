@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import RepliesBox from "../components/RepliesBox/RepliesBox"
+import Nav from "../components/Nav/navBar 2"
 import { Container } from "../components/Grid";
 import Returning from "../components/Returning"
 import API from "../utils/API";
@@ -48,10 +49,13 @@ subject: this.props.match.params.subject
       render() {
 
         return (
+            <div>
+            <Nav></Nav>
            <RepliesBox
             data = {this.state.data}
             userName = {this.state.returnedName}>
            </RepliesBox>
+           </div>
         )
     }
 }
