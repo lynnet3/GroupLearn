@@ -1,11 +1,6 @@
 import React, {Component} from "react";
-import { Container } from "../components/Grid";
 import Nav from "../components/Nav/navBar 2";
-import Submit from "../components/Submit";
-import Cancel from "../components/Cancel";
 import MessageBoard from "../components/MessageBoard";
-import ChatPopUp from "../components/ChatPopUp";
-import Jumbotron from "../components/Jumbotron";
 import Header from "../components/Header";
 import PostGroup from "../components/PostGroup";
 import API from "../utils/API";
@@ -43,22 +38,22 @@ subject: this.props.match.params.subject
       .catch(err => console.log(err));
       }
     
-      componentWillMount(){
+      componentDidMount(){
         this.checkForUser()
         this.getSubjectPosts()
       }
-
     render(){
         return (
-            <Container fluid>
+            <div className="bigCon">
             <div className= "container">
-            <Nav/>
+            <Nav></Nav>
             <Header
             subject = {this.state.subject}>
             </Header>
             
             <MessageBoard
-            data = {this.state.data}>
+            data = {this.state.data}
+            userName = {this.state.returnedName}>
             </MessageBoard>
             
             </div>
@@ -67,9 +62,10 @@ subject: this.props.match.params.subject
           subject = {this.state.subject}
           returnedName = {this.state.returnedName}
           returnedEmail = {this.state.returnedEmail}
+          submitComment={this.submitComment}
           ></PostGroup>
           </div>
-            </Container>
+            </div>
         )
     }
 }

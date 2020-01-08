@@ -1,16 +1,8 @@
 import React from "react";
-import Post from "../Post";
+import InboxPost from "../InboxPost/InboxPost";
 import API from "../../utils/API";
-import "./style.css";
-class MessageBoard extends React.Component {
+class RepliesBox extends React.Component {
 
-<<<<<<< HEAD
-  render() {
-    console.log("hiyah friend")
-    if (this.props.data.data) {
-    console.log(this.props.data.data)
-  
-=======
   state = {
     reply: ""
   }
@@ -40,14 +32,12 @@ let userName = this.props.userName
 
 
   render() {
-    if (this.props.data.data.length > 0) {
->>>>>>> 1d7f61f532e9ba405b25e3654384ab5a03f18f51
+    if (this.props.data.data) {
     return (
-      <div className="MessageBoard">
+      <div>
         {this.props.data.data.map(post => (
-        <Post
+        <InboxPost
         key={post._id}
-        asdf={post._id}
          name = {post.user.userName}
          subject = {post.subject}
          email = {post.user.email}
@@ -56,14 +46,12 @@ let userName = this.props.userName
          submitReply = {this.submitReply}
          handleInputChange = {this.handleInputChange}
          reply = {this.state.reply[post._id]}
+         replies = {post.replies}
         >
-        </Post> 
+        </InboxPost> 
         ))}
       </div> 
     );
-<<<<<<< HEAD
-        }
-=======
   } //if no posts exist dont even try to render Posts
   else {
     return (
@@ -73,7 +61,6 @@ let userName = this.props.userName
     </div>
     )
   }
->>>>>>> 1d7f61f532e9ba405b25e3654384ab5a03f18f51
   }
 }
-export default MessageBoard;
+export default RepliesBox;

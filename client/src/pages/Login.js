@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container } from "../components/Grid";
 import Returning from "../components/Returning"
+import Nav from "../components/Nav/navBar 2"
 import API from "../utils/API";
 
 class Login extends Component { //main is a test page to test user creation (Working)
@@ -50,6 +51,8 @@ render() {
 return (
 
 <Container fluid>
+
+  <Nav></Nav>
 
     <Returning
  

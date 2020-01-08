@@ -1,12 +1,17 @@
 import React from "react";
+import "./style.css"
 
 class NavBar extends React.Component {
   render() {
     return (
-      <div className="ui secondary  menu" id="nav">
+      <div className="ui secondary menu" id="nav">
         <a className="active item" href="/">
           <i className="home icon" id="home-nav" />
         </a>
+        <a className="item" id="subjects-dd" href="/inbox">
+            Friends
+            <i className="" id="friend-nav"></i>
+          </a>
         <div className="right menu">
           <div className="item">
             <div className="ui fluid icon input">

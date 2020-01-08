@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .Textbox {
     width: 750px;
     height: 100px;
@@ -10,4 +11,34 @@
 .Button {
   margin-left: auto;
 
+=======
+form {
+text-align: center;
+margin-bottom: 5px;
+
+}
+
+.infoTitle {
+    font-weight: bold;
+}
+
+.buddies {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.location {
+    float: left;
+}
+
+.subButton {
+    float: right;
+    width: 80px;
+}
+
+TextArea {
+    height: 55px;
+    width: 80%;
+>>>>>>> 1d7f61f532e9ba405b25e3654384ab5a03f18f51
 }
