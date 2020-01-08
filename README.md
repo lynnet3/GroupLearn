@@ -1,3 +1,6 @@
+# Group Learn
+Welcome to Group Learn a site designed for students to work together to find help in Math, Art, English, and Science.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
