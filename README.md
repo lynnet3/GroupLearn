@@ -1,5 +1,6 @@
 # Group Learn
 Welcome to Group Learn a site designed for students to work together to find help in Math, Art, English, and Science.
+Students can give the area that they are looking to find others to study with on then the specific category they are looking to study. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
