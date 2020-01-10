@@ -81,7 +81,7 @@ else {
         userName: req.body.userName
     }).then(function(results) {
       if (results.length > 0) {
-        res.send("Username taken, please try something else");
+        res.send("false");
       } else {
         db.User
       .create(req.body)

@@ -37,6 +37,11 @@ subject: this.props.match.params.subject
       })
       .catch(err => console.log(err));
       }
+
+      refreshPage(){
+        console.log("hey")
+        window.location.reload(true);
+      }
     
       componentDidMount(){
         this.checkForUser()
@@ -63,6 +68,7 @@ subject: this.props.match.params.subject
           returnedName = {this.state.returnedName}
           returnedEmail = {this.state.returnedEmail}
           submitComment={this.submitComment}
+          refreshPage={this.refreshPage}
           ></PostGroup>
           </div>
             </div>

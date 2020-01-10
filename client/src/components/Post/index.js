@@ -9,7 +9,7 @@ const Post = props => (
               src="#"
               alt="Avatar"
             />
-    <p>{props.name}</p>
+    <p style={{font: "30px"}}>{props.name}</p>
     <p>{props.subject}</p>
     <p>{props.email}</p>
     <p>{props.location}</p>
