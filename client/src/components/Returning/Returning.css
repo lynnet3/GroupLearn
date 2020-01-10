@@ -1,0 +1,11 @@
+.body{
+    background-color: beige;
+    font-family: "Lora", "serif";
+}
+
+#formBox{
+    padding-top: 10px;
+}
+#buttonBox{
+    padding-top: 10px;
+}

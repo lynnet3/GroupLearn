@@ -21,7 +21,7 @@ handleInputChange = event => {
 render(){
     return( 
        <div className="loginForm">
-        <form className="returning">
+        <form className="returning" id="formBox">
             <div className="ui center aligned basic segement">
                 <div className="ui two column very relaxed stackable grid">
                     <div className="column">
@@ -59,12 +59,13 @@ render(){
                 </div>
             </div>
         </form>
-            <div className="ui horizontal divider">
+            <div className="ui horizontal divider" id="buttonBox">
             Or
             </div>
             <button
             type="button"
-            className="ui big button">
+            className="ui big button"
+            id="subButton">
             <i className="signup icon"></i>
             Sign In
             </button>
