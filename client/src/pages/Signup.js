@@ -6,7 +6,7 @@ import New from "../components/New"
 class Signup extends Component { //main is a test page to test user creation (Working)
 
     SendBack = () => {
-        this.props.history.push("/")
+        this.props.history.push("/login")
     }
 //something is wrong
 render() {

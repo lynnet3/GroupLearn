@@ -1,7 +1,32 @@
 .post-container {
-    background: lightblue !important;
     border-top-style: solid;
     border-bottom-style: solid;
     border-color: white;
     padding: 15px;
+}
+
+#userName {
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+#AvatarInfo {
+    border-bottom: solid;
+    border-color: grey;
+}
+
+#Art {
+    Background: lightblue;
+}
+
+#Science {
+    background: yellowgreen;
+}
+
+#Math {
+    background: lightcoral;
+}
+
+#History {
+    Background: orange;
 }
