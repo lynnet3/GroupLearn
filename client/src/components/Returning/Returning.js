@@ -66,7 +66,7 @@ render(){
             type="button"
             className="ui big button">
             <i className="signup icon"></i>
-            Sign Up
+            Sign In
             </button>
     </div>
     )
