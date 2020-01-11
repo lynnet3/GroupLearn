@@ -7,7 +7,8 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 const TWO_HOURS = 1000 * 60 * 60 * 2;
 const SESSION_LENGTH = TWO_HOURS;
-//const NODE_ENV = "development"
+const NODE_ENV = "development"
+
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
