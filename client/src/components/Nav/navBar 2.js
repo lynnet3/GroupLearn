@@ -9,8 +9,8 @@ class NavBar extends React.Component {
           <i className="home icon" id="home-nav" />
         </a>
         <a className="item" id="subjects-dd" href="/inbox">
-            Friends
-            <i className="" id="friend-nav"></i>
+          Inbox
+          <i className="envelope square icon"></i>
           </a>
         <div className="right menu">
           <div className="item">
@@ -47,10 +47,7 @@ class NavBar extends React.Component {
               </div>
             </div>
           </div>
-          <a className="item" id="subjects-dd" href="/">
-            Friends
-            <i className="child icon" id="friend-nav"></i>
-          </a>
+          
           <a className="ui item" id="signup-nav" href="/signup">
             Sign Up
           </a>
