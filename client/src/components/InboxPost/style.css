@@ -1,7 +1,23 @@
 .post-container2 {
-    background: lightcoral !important;
+   
     border-top-style: solid;
     border-bottom-style: solid;
     border-color: white;
     padding: 15px;
+}
+
+#Art {
+    Background: lightblue;
+}
+
+#Science {
+    background: yellowgreen;
+}
+
+#Math {
+    background: lightcoral;
+}
+
+#History {
+    Background: orange;
 }
