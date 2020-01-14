@@ -32,7 +32,6 @@ let userName = this.props.userName
         API.submitReply({id, userName, replyContent})
           .then(res => {
             console.log(res.data)
-            this.props.history.push("/") 
           })
           .catch(err => console.log(err));
         

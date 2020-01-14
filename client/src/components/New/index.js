@@ -6,7 +6,8 @@ class New extends Component { //main is a test page to test user creation (Worki
     state = { //All the variables that will change
       userName: "",
         password: "",
-        email: ""
+        email: "",
+        message: ""
       };
     
 
@@ -25,8 +26,14 @@ if (form.userName && form.password && form.email) { //if all 3 areas are filled 
       email: form.email,
     })
       .then(res => {
-        console.log(res.data)
-      this.props.history.push("/")
+        console.log(res)
+if (res.data != false) {
+      this.props.SendBack()
+} else {
+  this.setState({
+    message: "Username taken, please try something else"
+  });
+}
       })
       .catch(err => console.log(err));
     }
@@ -74,6 +81,7 @@ render() {
                         />
                         <i className="envelope square icon"></i>
                     </div>
+                    <div>{this.state.message}</div>
                     <button 
                     type="submit"
                     onClick={this.handleSubmit}

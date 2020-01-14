@@ -35,7 +35,7 @@ if (form.location && form.content) { //if all 3 areas are filled out, run this
         email: this.props.returnedEmail
       }
     })
-      .then(res => console.log(res.data))
+      .then(res => this.props.refreshPage())
       .catch(err => console.log(err));
     }
 };
